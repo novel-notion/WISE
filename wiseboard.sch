@@ -14,7 +14,7 @@
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="14" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
@@ -13839,7 +13839,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="Q1" library="IRLML6402" deviceset="IRLML6402" device="TRPBF"/>
 <part name="U$2" library="WISE" deviceset="L78L15" device="" value="497-7278-1-ND"/>
 <part name="U$3" library="WISE" deviceset="L79L15" device="" value="497-7303-1-ND"/>
-<part name="CN1" library="adafruit" deviceset="JST_2PIN" device="-SMT-RA" value="455-1749-1-ND"/>
 <part name="C1" library="adafruit" deviceset="C-US" device="C1206" value="100nF"/>
 <part name="22" library="WISE" deviceset="587-2103-1-ND" device=""/>
 <part name="R1" library="adafruit" deviceset="R-US_" device="M1206" value="12k"/>
@@ -13874,7 +13873,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="P-2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="-15V" device=""/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C8" library="adafruit" deviceset="C-US" device="C1206" value="10uF"/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R10" library="adafruit" deviceset="R-US_" device="M1206" value="270K"/>
@@ -14003,6 +14001,8 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="P+8" library="WISE" deviceset="+15V" device=""/>
 <part name="U$19" library="WISE" deviceset="-15V" device=""/>
 <part name="GND46" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="CN1" library="adafruit" deviceset="JST_2PIN" device="-SMT-RA"/>
+<part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14074,7 +14074,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <instance part="Q1" gate="G$1" x="-342.9" y="-27.94" rot="R90"/>
 <instance part="U$2" gate="G$1" x="-144.78" y="-78.74"/>
 <instance part="U$3" gate="G$1" x="-144.78" y="-7.62"/>
-<instance part="CN1" gate="G$1" x="375.92" y="-154.94"/>
 <instance part="C1" gate="G$1" x="-114.3" y="-7.62"/>
 <instance part="22" gate="G$1" x="-261.62" y="-5.08" rot="R90"/>
 <instance part="R1" gate="G$1" x="-360.68" y="-30.48" rot="R270"/>
@@ -14109,7 +14108,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <instance part="P-2" gate="1" x="-144.78" y="45.72"/>
 <instance part="GND14" gate="1" x="-124.46" y="-20.32" rot="R90"/>
 <instance part="GND15" gate="1" x="304.8" y="-177.8"/>
-<instance part="GND16" gate="1" x="358.14" y="-157.48"/>
 <instance part="C8" gate="G$1" x="353.06" y="-165.1"/>
 <instance part="GND17" gate="1" x="353.06" y="-175.26"/>
 <instance part="R10" gate="G$1" x="269.24" y="-101.6" rot="R90"/>
@@ -14239,6 +14237,8 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <instance part="P+8" gate="1" x="-124.46" y="88.9"/>
 <instance part="U$19" gate="G$1" x="-124.46" y="60.96"/>
 <instance part="GND46" gate="1" x="-363.22" y="58.42" rot="R270"/>
+<instance part="CN1" gate="G$1" x="375.92" y="-154.94"/>
+<instance part="GND16" gate="1" x="360.68" y="-152.4" rot="R270"/>
 </instances>
 <busses>
 <bus name="QP[0..7]">
@@ -14347,11 +14347,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="304.8" y1="-175.26" x2="307.34" y2="-175.26" width="0.1524" layer="91"/>
 <wire x1="307.34" y1="-175.26" x2="307.34" y2="-172.72" width="0.1524" layer="91"/>
 <junction x="304.8" y="-175.26"/>
-</segment>
-<segment>
-<pinref part="CN1" gate="G$1" pin="2"/>
-<pinref part="GND16" gate="1" pin="GND"/>
-<wire x1="373.38" y1="-154.94" x2="358.14" y2="-154.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C8" gate="G$1" pin="2"/>
@@ -14509,6 +14504,11 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <pinref part="U$13" gate="G$1" pin="GND"/>
 <wire x1="-360.68" y1="58.42" x2="-342.9" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="GND46" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="CN1" gate="G$1" pin="1"/>
+<wire x1="373.38" y1="-152.4" x2="363.22" y2="-152.4" width="0.1524" layer="91"/>
+<pinref part="GND16" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -15238,19 +15238,20 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="327.66" y1="-149.86" x2="327.66" y2="-152.4" width="0.1524" layer="91"/>
 <junction x="327.66" y="-149.86"/>
 <junction x="327.66" y="-152.4"/>
-<pinref part="CN1" gate="G$1" pin="1"/>
 <wire x1="327.66" y1="-152.4" x2="347.98" y2="-152.4" width="0.1524" layer="91"/>
 <pinref part="C8" gate="G$1" pin="1"/>
 <wire x1="347.98" y1="-152.4" x2="353.06" y2="-152.4" width="0.1524" layer="91"/>
-<wire x1="353.06" y1="-152.4" x2="373.38" y2="-152.4" width="0.1524" layer="91"/>
-<wire x1="353.06" y1="-162.56" x2="353.06" y2="-152.4" width="0.1524" layer="91"/>
-<junction x="353.06" y="-152.4"/>
+<wire x1="353.06" y1="-162.56" x2="353.06" y2="-154.94" width="0.1524" layer="91"/>
+<wire x1="353.06" y1="-154.94" x2="353.06" y2="-152.4" width="0.1524" layer="91"/>
 <wire x1="347.98" y1="-152.4" x2="347.98" y2="-137.16" width="0.1524" layer="91"/>
 <wire x1="347.98" y1="-137.16" x2="373.38" y2="-137.16" width="0.1524" layer="91"/>
 <junction x="347.98" y="-152.4"/>
 <pinref part="JP2" gate="G$1" pin="1"/>
 <pinref part="U$18" gate="G$1" pin="VBAT"/>
 <junction x="347.98" y="-137.16"/>
+<pinref part="CN1" gate="G$1" pin="2"/>
+<wire x1="373.38" y1="-154.94" x2="353.06" y2="-154.94" width="0.1524" layer="91"/>
+<junction x="353.06" y="-154.94"/>
 </segment>
 </net>
 <net name="OE" class="0">
