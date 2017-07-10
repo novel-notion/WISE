@@ -16771,6 +16771,13 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="-241.3" y1="-248.92" x2="-312.42" y2="-248.92" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$38" class="0">
+<segment>
+<pinref part="R37" gate="G$1" pin="2"/>
+<pinref part="R36" gate="G$1" pin="1"/>
+<wire x1="-325.12" y1="-254" x2="-325.12" y2="-248.92" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
