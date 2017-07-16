@@ -8818,6 +8818,10 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="U$21" library="WISE" deviceset="VBAT" device=""/>
 <part name="U$22" library="WISE" deviceset="VBAT" device=""/>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R36" library="adafruit" deviceset="R-US_" device="R1206" value="790"/>
+<part name="GND49" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R37" library="adafruit" deviceset="R-US_" device="R1206" value="790"/>
+<part name="GND50" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9049,7 +9053,7 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <instance part="CN1" gate="G$1" x="515.62" y="-203.2"/>
 <instance part="GND16" gate="1" x="500.38" y="-200.66" rot="R270"/>
 <instance part="U2" gate="A" x="482.6" y="-129.54"/>
-<instance part="GND47" gate="1" x="467.36" y="-134.62" rot="R270"/>
+<instance part="GND47" gate="1" x="462.28" y="-162.56"/>
 <instance part="U$20" gate="G$1" x="558.8" y="-132.08" rot="R270"/>
 <instance part="GND48" gate="1" x="589.28" y="-165.1"/>
 <instance part="C9" gate="G$1" x="457.2" y="-119.38" rot="R180"/>
@@ -9058,6 +9062,10 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <instance part="U$21" gate="G$1" x="546.1" y="-172.72" rot="R180"/>
 <instance part="U$22" gate="G$1" x="574.04" y="-165.1" rot="R180"/>
 <instance part="GND21" gate="1" x="551.18" y="-129.54" rot="R90"/>
+<instance part="R36" gate="G$1" x="462.28" y="-137.16" rot="R90"/>
+<instance part="GND49" gate="1" x="469.9" y="-134.62" rot="R270"/>
+<instance part="R37" gate="G$1" x="477.52" y="-152.4" rot="R90"/>
+<instance part="GND50" gate="1" x="477.52" y="-162.56"/>
 </instances>
 <busses>
 <bus name="QP[0..7]">
@@ -9320,11 +9328,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <pinref part="GND16" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U2" gate="A" pin="VSS"/>
-<wire x1="485.14" y1="-134.62" x2="469.9" y2="-134.62" width="0.1524" layer="91"/>
-<pinref part="GND47" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="DONE" gate="G$1" pin="C"/>
 <pinref part="GND48" gate="1" pin="GND"/>
 <wire x1="589.28" y1="-162.56" x2="589.28" y2="-160.02" width="0.1524" layer="91"/>
@@ -9338,6 +9341,21 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <pinref part="U2" gate="A" pin="EPAD"/>
 <pinref part="GND21" gate="1" pin="GND"/>
 <wire x1="548.64" y1="-129.54" x2="541.02" y2="-129.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND47" gate="1" pin="GND"/>
+<pinref part="R36" gate="G$1" pin="1"/>
+<wire x1="462.28" y1="-160.02" x2="462.28" y2="-142.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U2" gate="A" pin="VSS"/>
+<pinref part="GND49" gate="1" pin="GND"/>
+<wire x1="472.44" y1="-134.62" x2="485.14" y2="-134.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R37" gate="G$1" pin="1"/>
+<pinref part="GND50" gate="1" pin="GND"/>
+<wire x1="477.52" y1="-160.02" x2="477.52" y2="-157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -10551,6 +10569,25 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="541.02" y1="-142.24" x2="546.1" y2="-142.24" width="0.1524" layer="91"/>
 <pinref part="DONE1" gate="G$1" pin="C"/>
 <wire x1="546.1" y1="-142.24" x2="546.1" y2="-152.4" width="0.1524" layer="91"/>
+<pinref part="U2" gate="A" pin="!EN"/>
+<wire x1="541.02" y1="-139.7" x2="546.1" y2="-139.7" width="0.1524" layer="91"/>
+<wire x1="546.1" y1="-139.7" x2="546.1" y2="-142.24" width="0.1524" layer="91"/>
+<junction x="546.1" y="-142.24"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="ISET"/>
+<pinref part="R36" gate="G$1" pin="2"/>
+<wire x1="462.28" y1="-132.08" x2="485.14" y2="-132.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$28" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="TS"/>
+<pinref part="R37" gate="G$1" pin="2"/>
+<wire x1="485.14" y1="-139.7" x2="477.52" y2="-139.7" width="0.1524" layer="91"/>
+<wire x1="477.52" y1="-139.7" x2="477.52" y2="-147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
