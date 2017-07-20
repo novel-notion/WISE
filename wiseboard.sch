@@ -8626,9 +8626,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="R25" library="adafruit" deviceset="R-US_" device="R1206" value="10K"/>
 <part name="U$14" library="WISE" deviceset="AP2112" device="" value="AP2112K-3.3TRG1DICT-ND"/>
 <part name="U$4" library="WISE" deviceset="HFQ339CT-ND" device=""/>
-<part name="R26" library="adafruit" deviceset="R-US_" device="M1206" value="4K7"/>
-<part name="R27" library="adafruit" deviceset="R-US_" device="M1206" value="10K"/>
-<part name="GND31" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND36" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND37" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P-4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="-15V" device=""/>
@@ -8676,9 +8673,8 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="+3V11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="ESPDEBUG_2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X8" device=""/>
 <part name="ESPDEBUG_1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X8" device=""/>
-<part name="INPUTBUTTONHEADER1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device=""/>
 <part name="SOLARPIN" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device=""/>
-<part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device=""/>
+<part name="BAT_PIN" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device=""/>
 <part name="IC2" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="LM358" device="MX"/>
 <part name="U$16" library="WISE" deviceset="-20V" device=""/>
 <part name="U$17" library="WISE" deviceset="+22V" device=""/>
@@ -8691,7 +8687,7 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="P+8" library="WISE" deviceset="+15V" device=""/>
 <part name="U$19" library="WISE" deviceset="-15V" device=""/>
 <part name="GND46" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="CN1" library="adafruit" deviceset="JST_2PIN" device="-SMT-RA"/>
+<part name="BAT_CON" library="adafruit" deviceset="JST_2PIN" device="-SMT-RA"/>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U2" library="WISE" deviceset="BQ24210DQCT" device=""/>
 <part name="GND47" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -8711,6 +8707,7 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="R10" library="adafruit" deviceset="R-US_" device="M1206" value="1K"/>
 <part name="JP4" library="Sparkfun-Passives" deviceset="JUMPER-SMT_2_NC_PASTE" device="_NO-SILK" value="JUMPER"/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8730,11 +8727,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="81.28" y1="43.18" x2="81.28" y2="111.76" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="81.28" y1="111.76" x2="-15.24" y2="111.76" width="0.1524" layer="94" style="shortdash"/>
 <text x="10.16" y="114.3" size="3.81" layer="94">Programming Utilities</text>
-<wire x1="599.44" y1="-165.1" x2="599.44" y2="-233.68" width="0.1524" layer="94" style="shortdash"/>
-<wire x1="599.44" y1="-233.68" x2="675.64" y2="-233.68" width="0.1524" layer="94" style="shortdash"/>
-<wire x1="675.64" y1="-233.68" x2="675.64" y2="-165.1" width="0.1524" layer="94" style="shortdash"/>
-<wire x1="675.64" y1="-165.1" x2="599.44" y2="-165.1" width="0.1524" layer="94" style="shortdash"/>
-<text x="617.22" y="-162.56" size="3.81" layer="94">Solar Panel Connector</text>
 <wire x1="231.14" y1="111.76" x2="231.14" y2="43.18" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="231.14" y1="43.18" x2="309.88" y2="43.18" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="309.88" y1="43.18" x2="309.88" y2="111.76" width="0.1524" layer="94" style="shortdash"/>
@@ -8854,9 +8846,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <instance part="R25" gate="G$1" x="50.8" y="78.74" rot="R90"/>
 <instance part="U$14" gate="G$1" x="393.7" y="81.28"/>
 <instance part="U$4" gate="G$1" x="170.18" y="-81.28"/>
-<instance part="R26" gate="G$1" x="63.5" y="-45.72" rot="R270"/>
-<instance part="R27" gate="G$1" x="63.5" y="-25.4" rot="R270"/>
-<instance part="GND31" gate="1" x="63.5" y="-12.7" rot="R180"/>
 <instance part="GND36" gate="1" x="121.92" y="20.32" rot="R270"/>
 <instance part="GND37" gate="1" x="149.86" y="-182.88" rot="R270"/>
 <instance part="P-4" gate="1" x="127" y="15.24" rot="R270"/>
@@ -8904,9 +8893,8 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <instance part="+3V11" gate="G$1" x="-289.56" y="58.42"/>
 <instance part="ESPDEBUG_2" gate="A" x="444.5" y="-27.94"/>
 <instance part="ESPDEBUG_1" gate="A" x="419.1" y="-27.94"/>
-<instance part="INPUTBUTTONHEADER1" gate="G$1" x="-228.6" y="53.34"/>
 <instance part="SOLARPIN" gate="G$1" x="223.52" y="-129.54" rot="R180"/>
-<instance part="JP2" gate="G$1" x="347.98" y="-203.2" rot="R270"/>
+<instance part="BAT_PIN" gate="G$1" x="347.98" y="-203.2" rot="R270"/>
 <instance part="IC2" gate="A" x="-124.46" y="73.66"/>
 <instance part="IC2" gate="P" x="-124.46" y="73.66"/>
 <instance part="U$16" gate="G$1" x="119.38" y="-101.6" rot="R90"/>
@@ -8920,7 +8908,7 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <instance part="P+8" gate="1" x="-124.46" y="88.9"/>
 <instance part="U$19" gate="G$1" x="-124.46" y="60.96"/>
 <instance part="GND46" gate="1" x="-363.22" y="58.42" rot="R270"/>
-<instance part="CN1" gate="G$1" x="332.74" y="-203.2" rot="R270"/>
+<instance part="BAT_CON" gate="G$1" x="332.74" y="-203.2" rot="R270"/>
 <instance part="GND16" gate="1" x="335.28" y="-187.96" rot="R180"/>
 <instance part="U2" gate="A" x="287.02" y="-111.76"/>
 <instance part="GND47" gate="1" x="266.7" y="-144.78"/>
@@ -8940,6 +8928,7 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <instance part="R10" gate="G$1" x="350.52" y="-132.08" rot="R90"/>
 <instance part="JP4" gate="G$1" x="365.76" y="-127" rot="R90"/>
 <instance part="GND15" gate="1" x="365.76" y="-142.24"/>
+<instance part="P+2" gate="VCC" x="360.68" y="106.68"/>
 </instances>
 <busses>
 <bus name="QP[0..7]">
@@ -9079,7 +9068,7 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <segment>
 <pinref part="GND26" gate="1" pin="GND"/>
 <wire x1="347.98" y1="-190.5" x2="347.98" y2="-200.66" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="G$1" pin="2"/>
+<pinref part="BAT_PIN" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="378.46" y1="81.28" x2="368.3" y2="81.28" width="0.1524" layer="91"/>
@@ -9104,11 +9093,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="50.8" y1="50.8" x2="50.8" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="GND35" gate="1" pin="GND"/>
 <pinref part="R25" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<pinref part="R27" gate="G$1" pin="1"/>
-<wire x1="63.5" y1="-20.32" x2="63.5" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="GND31" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="GND@1"/>
@@ -9166,7 +9150,7 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <pinref part="GND46" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="CN1" gate="G$1" pin="1"/>
+<pinref part="BAT_CON" gate="G$1" pin="1"/>
 <wire x1="335.28" y1="-200.66" x2="335.28" y2="-190.5" width="0.1524" layer="91"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 </segment>
@@ -9211,6 +9195,19 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="251.46" y1="76.2" x2="274.32" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="P+10" gate="VCC" pin="VCC"/>
 <pinref part="JP1" gate="A" pin="3"/>
+</segment>
+<segment>
+<pinref part="U$14" gate="G$1" pin="VIN"/>
+<wire x1="378.46" y1="86.36" x2="360.68" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="360.68" y1="86.36" x2="353.06" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="353.06" y1="86.36" x2="353.06" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="D2" gate="G$1" pin="C"/>
+<junction x="353.06" y="86.36"/>
+<pinref part="R22" gate="G$1" pin="1"/>
+<wire x1="353.06" y1="76.2" x2="368.3" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="P+2" gate="VCC" pin="VCC"/>
+<wire x1="360.68" y1="104.14" x2="360.68" y2="86.36" width="0.1524" layer="91"/>
+<junction x="360.68" y="86.36"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -9626,14 +9623,7 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <segment>
 <pinref part="INPUTBUTTONHEADER" gate="G$1" pin="1"/>
 <pinref part="+3V11" gate="G$1" pin="+3V3"/>
-<wire x1="-289.56" y1="55.88" x2="-271.78" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-271.78" y1="55.88" x2="-264.16" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-271.78" y1="55.88" x2="-271.78" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="-271.78" y1="48.26" x2="-238.76" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="-238.76" y1="48.26" x2="-238.76" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="INPUTBUTTONHEADER1" gate="G$1" pin="1"/>
-<wire x1="-238.76" y1="55.88" x2="-231.14" y2="55.88" width="0.1524" layer="91"/>
-<junction x="-271.78" y="55.88"/>
+<wire x1="-289.56" y1="55.88" x2="-264.16" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="416.56" y1="-35.56" x2="401.32" y2="-35.56" width="0.1524" layer="91"/>
@@ -9719,15 +9709,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 </net>
 <net name="ADC" class="0">
 <segment>
-<pinref part="R26" gate="G$1" pin="1"/>
-<pinref part="R27" gate="G$1" pin="2"/>
-<wire x1="63.5" y1="-40.64" x2="63.5" y2="-33.02" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="-33.02" x2="63.5" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="-33.02" x2="99.06" y2="-33.02" width="0.1524" layer="91"/>
-<junction x="63.5" y="-33.02"/>
-<label x="93.98" y="-33.02" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="X1" gate="G$1" pin="ADC"/>
 <wire x1="276.86" y1="-17.78" x2="261.62" y2="-17.78" width="0.1524" layer="91"/>
 <label x="261.62" y="-17.78" size="1.778" layer="95"/>
@@ -9795,10 +9776,10 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="325.12" y1="-180.34" x2="332.74" y2="-180.34" width="0.1524" layer="91"/>
 <wire x1="332.74" y1="-180.34" x2="350.52" y2="-180.34" width="0.1524" layer="91"/>
 <wire x1="350.52" y1="-180.34" x2="350.52" y2="-200.66" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="G$1" pin="1"/>
+<pinref part="BAT_PIN" gate="G$1" pin="1"/>
 <pinref part="U$18" gate="G$1" pin="VBAT"/>
 <junction x="350.52" y="-180.34"/>
-<pinref part="CN1" gate="G$1" pin="2"/>
+<pinref part="BAT_CON" gate="G$1" pin="2"/>
 <wire x1="332.74" y1="-200.66" x2="332.74" y2="-180.34" width="0.1524" layer="91"/>
 <junction x="332.74" y="-180.34"/>
 </segment>
@@ -10078,20 +10059,9 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <junction x="63.5" y="-132.08"/>
 <wire x1="22.86" y1="-68.58" x2="22.86" y2="-55.88" width="0.1524" layer="91"/>
 <junction x="22.86" y="-68.58"/>
-<pinref part="U$11" gate="G$1" pin="OE"/>
-<pinref part="U$11" gate="G$1" pin="VCC"/>
-<wire x1="63.5" y1="-73.66" x2="63.5" y2="-68.58" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="-55.88" x2="63.5" y2="-55.88" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="-55.88" x2="63.5" y2="-68.58" width="0.1524" layer="91"/>
-<junction x="63.5" y="-68.58"/>
 <pinref part="C12" gate="G$1" pin="1"/>
 <wire x1="63.5" y1="-132.08" x2="68.58" y2="-132.08" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="-68.58" x2="68.58" y2="-68.58" width="0.1524" layer="91"/>
-<pinref part="C11" gate="G$1" pin="1"/>
-<wire x1="63.5" y1="-55.88" x2="63.5" y2="-50.8" width="0.1524" layer="91"/>
-<junction x="63.5" y="-55.88"/>
-<pinref part="R26" gate="G$1" pin="2"/>
-<wire x1="63.5" y1="-55.88" x2="116.84" y2="-55.88" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="-55.88" x2="116.84" y2="-55.88" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="-55.88" x2="116.84" y2="0" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="VDD"/>
 <wire x1="116.84" y1="0" x2="134.62" y2="0" width="0.1524" layer="91"/>
@@ -10174,13 +10144,7 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <junction x="-299.72" y="68.58"/>
 <wire x1="-299.72" y1="68.58" x2="-299.72" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="INPUTBUTTONHEADER" gate="G$1" pin="2"/>
-<wire x1="-299.72" y1="53.34" x2="-276.86" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="-276.86" y1="53.34" x2="-264.16" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="-276.86" y1="53.34" x2="-276.86" y2="43.18" width="0.1524" layer="91"/>
-<junction x="-276.86" y="53.34"/>
-<pinref part="INPUTBUTTONHEADER1" gate="G$1" pin="2"/>
-<wire x1="-276.86" y1="43.18" x2="-231.14" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="-231.14" y1="43.18" x2="-231.14" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-299.72" y1="53.34" x2="-264.16" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$27" class="0">
@@ -10231,17 +10195,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <pinref part="R34" gate="G$1" pin="1"/>
 <wire x1="-223.52" y1="78.74" x2="-223.52" y2="88.9" width="0.1524" layer="91"/>
 <junction x="-223.52" y="78.74"/>
-</segment>
-</net>
-<net name="N$25" class="0">
-<segment>
-<pinref part="U$14" gate="G$1" pin="VIN"/>
-<wire x1="378.46" y1="86.36" x2="353.06" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="353.06" y1="86.36" x2="353.06" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="D2" gate="G$1" pin="C"/>
-<junction x="353.06" y="86.36"/>
-<pinref part="R22" gate="G$1" pin="1"/>
-<wire x1="353.06" y1="76.2" x2="368.3" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="-20V" class="0">
@@ -10386,16 +10339,26 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <pinref part="JP4" gate="G$1" pin="2"/>
 </segment>
 </net>
+<net name="N$12" class="0">
+<segment>
+<wire x1="-231.14" y1="43.18" x2="-231.14" y2="53.34" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="U$11" gate="G$1" pin="VCC"/>
+<pinref part="U$11" gate="G$1" pin="OE"/>
+<wire x1="63.5" y1="-73.66" x2="63.5" y2="-68.58" width="0.1524" layer="91"/>
+<junction x="63.5" y="-68.58"/>
+<wire x1="63.5" y1="-68.58" x2="68.58" y2="-68.58" width="0.1524" layer="91"/>
+<pinref part="C11" gate="G$1" pin="1"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 <errors>
 <approved hash="102,1,408.94,86.36,VOUT,+3V3,,,,"/>
-<approved hash="104,1,304.8,-172.72,IC1,GND1,GND,,,"/>
-<approved hash="104,1,307.34,-172.72,IC1,GND2,GND,,,"/>
-<approved hash="104,1,327.66,-152.4,IC1,VBAT3,VBAT,,,"/>
-<approved hash="104,1,327.66,-149.86,IC1,VBAT2,VBAT,,,"/>
-<approved hash="104,1,327.66,-147.32,IC1,VBAT1,VBAT,,,"/>
 <approved hash="104,1,-279.4,-27.94,U1,VIN,N$4,,,"/>
 <approved hash="104,1,-129.54,-66.04,U$2,VOUT,+15V,,,"/>
 <approved hash="104,1,-129.54,2.54,U$3,VOUT,-15V,,,"/>
@@ -10405,12 +10368,12 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <approved hash="104,1,276.86,-33.02,X1,VCC,+3V3,,,"/>
 <approved hash="104,1,63.5,-68.58,U$11,VCC,VDD,,,"/>
 <approved hash="104,1,63.5,-132.08,U$12,VCC,VDD,,,"/>
-<approved hash="104,1,378.46,86.36,U$14,VIN,N$25,,,"/>
 <approved hash="104,1,-342.9,53.34,U$13,VCC,+3V3,,,"/>
 <approved hash="114,1,-123.065,73.5965,IC2,B,-IN,,,"/>
 <approved hash="114,1,-123.065,73.5965,IC2,B,+IN,,,"/>
 <approved hash="104,1,-124.46,81.28,IC2P,V+,+15V,,,"/>
 <approved hash="104,1,-124.46,66.04,IC2P,V-,-15V,,,"/>
+<approved hash="202,1,345.44,-116.84,U2,VDPM,,,,"/>
 <approved hash="208,1,-78.74,73.66,VCOMMON,sup,,,,"/>
 <approved hash="208,1,-116.84,73.66,VCOMMON,out,,,,"/>
 <approved hash="208,1,121.92,-91.44,VCOMMON,sup,,,,"/>
@@ -10425,8 +10388,6 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <approved hash="113,1,446.634,-25.2688,ESPDEBUG_2,,,,,"/>
 <approved hash="113,1,421.234,-25.2688,ESPDEBUG_1,,,,,"/>
 <approved hash="113,1,-219.897,56.0112,INPUTBUTTONHEADER1,,,,,"/>
-<approved hash="113,1,134.539,58.2888,SOLARPIN,,,,,"/>
-<approved hash="113,1,373.617,-137.029,JP2,,,,,"/>
 </errors>
 </schematic>
 </drawing>
