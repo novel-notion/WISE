@@ -7159,6 +7159,21 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <text x="25.7556" y="9.1186" size="2.0828" layer="95" ratio="6" rot="SR0">&gt;Name</text>
 <text x="25.1206" y="6.5786" size="2.0828" layer="96" ratio="6" rot="SR0">&gt;Value</text>
 </symbol>
+<symbol name="W25Q32JV">
+<pin name="CS" x="-17.78" y="7.62" length="middle"/>
+<pin name="MISO" x="-17.78" y="2.54" length="middle"/>
+<pin name="WP" x="-17.78" y="-2.54" length="middle"/>
+<pin name="GND" x="-17.78" y="-7.62" length="middle"/>
+<pin name="VCC" x="17.78" y="7.62" length="middle" rot="R180"/>
+<pin name="RESET" x="17.78" y="2.54" length="middle" rot="R180"/>
+<pin name="CLK" x="17.78" y="-2.54" length="middle" rot="R180"/>
+<pin name="MOSI" x="17.78" y="-7.62" length="middle" rot="R180"/>
+<wire x1="-12.7" y1="10.16" x2="12.7" y2="10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="10.16" x2="12.7" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-10.16" x2="-12.7" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-10.16" x2="-12.7" y2="10.16" width="0.254" layer="94"/>
+<text x="-5.08" y="10.16" size="1.778" layer="94">W25Q32JV</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="587-2103-1-ND">
@@ -7513,6 +7528,28 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <attribute name="MANUFACTURER_PART_NUMBER" value="BQ24210DQCT" constant="no"/>
 <attribute name="VENDOR" value="Vendor" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="W25Q32JVSSIQ">
+<gates>
+<gate name="G$1" symbol="W25Q32JV" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SO8">
+<connects>
+<connect gate="G$1" pin="CLK" pad="6"/>
+<connect gate="G$1" pin="CS" pad="1"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="MISO" pad="2"/>
+<connect gate="G$1" pin="MOSI" pad="5"/>
+<connect gate="G$1" pin="RESET" pad="7"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="WP" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -8708,6 +8745,10 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="JP4" library="Sparkfun-Passives" deviceset="JUMPER-SMT_2_NC_PASTE" device="_NO-SILK" value="JUMPER"/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="U$23" library="WISE" deviceset="W25Q32JVSSIQ" device=""/>
+<part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="+3V13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="+3V14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8762,6 +8803,17 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="457.2" y1="-66.04" x2="391.16" y2="-66.04" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="391.16" y1="-66.04" x2="391.16" y2="22.86" width="0.1524" layer="94" style="shortdash"/>
 <text x="406.4" y="27.94" size="2.54" layer="94">ESP DEBUG HEADER</text>
+<text x="20.32" y="104.14" size="1.778" layer="97">Note: GPIO15 is used to detect bootmode and is also 
+connected to CS of flash chip - may cause issues</text>
+<text x="116.84" y="99.06" size="1.778" layer="97">Note: A write enable instruction must
+be issued before a anything else happens. The device starts in 
+a write-disabled state</text>
+<text x="116.84" y="96.52" size="1.778" layer="97">WP pulled high to disable hardware write-protection</text>
+<wire x1="96.52" y1="111.76" x2="96.52" y2="43.18" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="96.52" y1="43.18" x2="193.04" y2="43.18" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="193.04" y1="43.18" x2="193.04" y2="111.76" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="193.04" y1="111.76" x2="96.52" y2="111.76" width="0.1524" layer="94" style="shortdash"/>
+<text x="119.38" y="114.3" size="3.81" layer="94">Flash Memory Chip</text>
 </plain>
 <instances>
 <instance part="GND1" gate="1" x="-172.72" y="-119.38"/>
@@ -8929,6 +8981,10 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <instance part="JP4" gate="G$1" x="365.76" y="-127" rot="R90"/>
 <instance part="GND15" gate="1" x="365.76" y="-142.24"/>
 <instance part="P+2" gate="VCC" x="360.68" y="106.68"/>
+<instance part="U$23" gate="G$1" x="144.78" y="83.82"/>
+<instance part="GND20" gate="1" x="114.3" y="76.2" rot="R270"/>
+<instance part="+3V13" gate="G$1" x="177.8" y="91.44" rot="R270"/>
+<instance part="+3V14" gate="G$1" x="104.14" y="81.28" rot="R90"/>
 </instances>
 <busses>
 <bus name="QP[0..7]">
@@ -9189,6 +9245,11 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="365.76" y1="-132.08" x2="365.76" y2="-139.7" width="0.1524" layer="91"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U$23" gate="G$1" pin="GND"/>
+<wire x1="127" y1="76.2" x2="116.84" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="GND20" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -9417,6 +9478,11 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <label x="401.32" y="-30.48" size="1.778" layer="95"/>
 <pinref part="ESPDEBUG_1" gate="A" pin="6"/>
 </segment>
+<segment>
+<pinref part="U$23" gate="G$1" pin="MISO"/>
+<wire x1="127" y1="86.36" x2="114.3" y2="86.36" width="0.1524" layer="91"/>
+<label x="114.3" y="86.36" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPIO14" class="0">
 <segment>
@@ -9439,6 +9505,11 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <label x="401.32" y="-27.94" size="1.778" layer="95"/>
 <pinref part="ESPDEBUG_1" gate="A" pin="5"/>
 </segment>
+<segment>
+<pinref part="U$23" gate="G$1" pin="CLK"/>
+<wire x1="162.56" y1="81.28" x2="177.8" y2="81.28" width="0.1524" layer="91"/>
+<label x="170.18" y="81.28" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPIO13" class="0">
 <segment>
@@ -9460,6 +9531,11 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="416.56" y1="-33.02" x2="401.32" y2="-33.02" width="0.1524" layer="91"/>
 <label x="401.32" y="-33.02" size="1.778" layer="95"/>
 <pinref part="ESPDEBUG_1" gate="A" pin="7"/>
+</segment>
+<segment>
+<pinref part="U$23" gate="G$1" pin="MOSI"/>
+<wire x1="162.56" y1="76.2" x2="177.8" y2="76.2" width="0.1524" layer="91"/>
+<label x="170.18" y="76.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BOOSTENA" class="0">
@@ -9630,6 +9706,16 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <pinref part="ESPDEBUG_1" gate="A" pin="8"/>
 <pinref part="+3V12" gate="G$1" pin="+3V3"/>
 </segment>
+<segment>
+<pinref part="U$23" gate="G$1" pin="VCC"/>
+<wire x1="162.56" y1="91.44" x2="175.26" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="+3V13" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="U$23" gate="G$1" pin="WP"/>
+<wire x1="127" y1="81.28" x2="106.68" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="+3V14" gate="G$1" pin="+3V3"/>
+</segment>
 </net>
 <net name="RXD" class="0">
 <segment>
@@ -9675,6 +9761,11 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="424.18" y1="-33.02" x2="441.96" y2="-33.02" width="0.1524" layer="91"/>
 <label x="424.18" y="-33.02" size="1.778" layer="95"/>
 <pinref part="ESPDEBUG_2" gate="A" pin="7"/>
+</segment>
+<segment>
+<pinref part="U$23" gate="G$1" pin="CS"/>
+<wire x1="127" y1="91.44" x2="114.3" y2="91.44" width="0.1524" layer="91"/>
+<label x="114.3" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$23" class="0">
