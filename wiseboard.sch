@@ -8749,6 +8749,8 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="+3V14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="GND27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND28" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8788,11 +8790,11 @@ Source: http://cache.national.com/ds/LM/LM158.pdf</description>
 <wire x1="210.82" y1="-66.04" x2="210.82" y2="27.94" width="0.1524" layer="94" style="shortdash"/>
 <text x="287.02" y="-76.2" size="3.81" layer="94">Charge Circuitry</text>
 <text x="279.4" y="33.02" size="3.81" layer="94">ESP8266</text>
-<wire x1="342.9" y1="101.6" x2="342.9" y2="71.12" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="342.9" y1="111.76" x2="342.9" y2="71.12" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="342.9" y1="71.12" x2="421.64" y2="71.12" width="0.1524" layer="94" style="shortdash"/>
-<wire x1="421.64" y1="71.12" x2="421.64" y2="101.6" width="0.1524" layer="94" style="shortdash"/>
-<wire x1="421.64" y1="101.6" x2="342.9" y2="101.6" width="0.1524" layer="94" style="shortdash"/>
-<text x="360.68" y="106.68" size="3.81" layer="94">Voltage Regulator</text>
+<wire x1="421.64" y1="71.12" x2="421.64" y2="111.76" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="421.64" y1="111.76" x2="342.9" y2="111.76" width="0.1524" layer="94" style="shortdash"/>
+<text x="363.22" y="116.84" size="3.81" layer="94">Voltage Regulator</text>
 <wire x1="195.58" y1="27.94" x2="-22.86" y2="27.94" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="-22.86" y1="27.94" x2="-22.86" y2="-187.96" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="-22.86" y1="-187.96" x2="195.58" y2="-187.96" width="0.1524" layer="94" style="shortdash"/>
@@ -8922,8 +8924,8 @@ a write-disabled state</text>
 <instance part="+3V7" gate="G$1" x="342.9" y="-17.78"/>
 <instance part="R13" gate="G$1" x="393.7" y="-124.46" rot="R90"/>
 <instance part="R14" gate="G$1" x="378.46" y="-124.46" rot="R90"/>
-<instance part="R28" gate="G$1" x="-391.16" y="63.5"/>
-<instance part="R29" gate="G$1" x="-368.3" y="63.5"/>
+<instance part="R28" gate="G$1" x="-368.3" y="63.5"/>
+<instance part="R29" gate="G$1" x="-386.08" y="63.5"/>
 <instance part="R30" gate="G$1" x="-284.48" y="93.98" rot="R90"/>
 <instance part="R31" gate="G$1" x="-269.24" y="93.98" rot="R90"/>
 <instance part="R32" gate="G$1" x="-254" y="93.98" rot="R90"/>
@@ -8980,11 +8982,13 @@ a write-disabled state</text>
 <instance part="R10" gate="G$1" x="350.52" y="-132.08" rot="R90"/>
 <instance part="JP4" gate="G$1" x="365.76" y="-127" rot="R90"/>
 <instance part="GND15" gate="1" x="365.76" y="-142.24"/>
-<instance part="P+2" gate="VCC" x="360.68" y="106.68"/>
+<instance part="P+2" gate="VCC" x="360.68" y="104.14"/>
 <instance part="U$23" gate="G$1" x="144.78" y="83.82"/>
 <instance part="GND20" gate="1" x="114.3" y="76.2" rot="R270"/>
 <instance part="+3V13" gate="G$1" x="177.8" y="91.44" rot="R270"/>
 <instance part="+3V14" gate="G$1" x="104.14" y="81.28" rot="R90"/>
+<instance part="GND27" gate="1" x="30.48" y="-104.14" rot="R270"/>
+<instance part="GND28" gate="1" x="30.48" y="-167.64" rot="R270"/>
 </instances>
 <busses>
 <bus name="QP[0..7]">
@@ -9186,11 +9190,6 @@ a write-disabled state</text>
 <pinref part="GND43" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="R28" gate="G$1" pin="1"/>
-<pinref part="GND44" gate="1" pin="GND"/>
-<wire x1="-401.32" y1="63.5" x2="-396.24" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="R35" gate="G$1" pin="2"/>
 <pinref part="GND42" gate="1" pin="GND"/>
 <wire x1="-307.34" y1="83.82" x2="-307.34" y2="78.74" width="0.1524" layer="91"/>
@@ -9250,6 +9249,19 @@ a write-disabled state</text>
 <wire x1="127" y1="76.2" x2="116.84" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="GND20" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="GND44" gate="1" pin="GND"/>
+<pinref part="R29" gate="G$1" pin="1"/>
+<wire x1="-391.16" y1="63.5" x2="-401.32" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$11" gate="G$1" pin="GND"/>
+<pinref part="GND27" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$12" gate="G$1" pin="GND"/>
+<pinref part="GND28" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -9267,7 +9279,7 @@ a write-disabled state</text>
 <pinref part="R22" gate="G$1" pin="1"/>
 <wire x1="353.06" y1="76.2" x2="368.3" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
-<wire x1="360.68" y1="104.14" x2="360.68" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="360.68" y1="101.6" x2="360.68" y2="86.36" width="0.1524" layer="91"/>
 <junction x="360.68" y="86.36"/>
 </segment>
 </net>
@@ -9810,14 +9822,14 @@ a write-disabled state</text>
 <pinref part="ESPDEBUG_1" gate="A" pin="2"/>
 </segment>
 <segment>
-<pinref part="R28" gate="G$1" pin="2"/>
-<pinref part="R29" gate="G$1" pin="1"/>
-<wire x1="-373.38" y1="63.5" x2="-378.46" y2="63.5" width="0.1524" layer="91"/>
-<junction x="-378.46" y="63.5"/>
-<wire x1="-378.46" y1="63.5" x2="-386.08" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-378.46" y1="73.66" x2="-378.46" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="-378.46" y1="73.66" x2="-386.08" y2="73.66" width="0.1524" layer="91"/>
 <label x="-386.08" y="73.66" size="1.778" layer="95"/>
+<wire x1="-378.46" y1="73.66" x2="-378.46" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="R29" gate="G$1" pin="2"/>
+<wire x1="-378.46" y1="63.5" x2="-381" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="R28" gate="G$1" pin="1"/>
+<wire x1="-378.46" y1="63.5" x2="-373.38" y2="63.5" width="0.1524" layer="91"/>
+<junction x="-378.46" y="63.5"/>
 </segment>
 </net>
 <net name="VCOMMON" class="0">
@@ -10134,11 +10146,6 @@ a write-disabled state</text>
 <wire x1="157.48" y1="-127" x2="116.84" y2="-127" width="0.1524" layer="91"/>
 <junction x="157.48" y="-127"/>
 <junction x="116.84" y="-127"/>
-<pinref part="U$4" gate="G$1" pin="SHR"/>
-<wire x1="160.02" y1="-20.32" x2="134.62" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="-20.32" x2="134.62" y2="-30.48" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="NC@1"/>
-<wire x1="134.62" y1="-30.48" x2="160.02" y2="-30.48" width="0.1524" layer="91"/>
 <pinref part="U$11" gate="G$1" pin="STR"/>
 <wire x1="33.02" y1="-68.58" x2="22.86" y2="-68.58" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="-68.58" x2="22.86" y2="-116.84" width="0.1524" layer="91"/>
@@ -10152,19 +10159,33 @@ a write-disabled state</text>
 <junction x="22.86" y="-68.58"/>
 <pinref part="C12" gate="G$1" pin="1"/>
 <wire x1="63.5" y1="-132.08" x2="68.58" y2="-132.08" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="-55.88" x2="116.84" y2="-55.88" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="-55.88" x2="116.84" y2="0" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="-55.88" x2="63.5" y2="-55.88" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="-55.88" x2="116.84" y2="-55.88" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="-55.88" x2="116.84" y2="-20.32" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="VDD"/>
-<wire x1="116.84" y1="0" x2="134.62" y2="0" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="0" x2="160.02" y2="0" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="-20.32" x2="134.62" y2="0" width="0.1524" layer="91"/>
-<junction x="134.62" y="-20.32"/>
-<junction x="134.62" y="0"/>
+<wire x1="116.84" y1="-20.32" x2="116.84" y2="0" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="0" x2="160.02" y2="0" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="-127" x2="116.84" y2="-55.88" width="0.1524" layer="91"/>
 <junction x="116.84" y="-55.88"/>
 <wire x1="22.86" y1="-55.88" x2="0" y2="-55.88" width="0.1524" layer="91"/>
 <junction x="22.86" y="-55.88"/>
 <pinref part="VDD2" gate="G$1" pin="VDD"/>
+<pinref part="U$11" gate="G$1" pin="VCC"/>
+<pinref part="U$11" gate="G$1" pin="OE"/>
+<wire x1="63.5" y1="-73.66" x2="63.5" y2="-68.58" width="0.1524" layer="91"/>
+<junction x="63.5" y="-68.58"/>
+<wire x1="63.5" y1="-68.58" x2="68.58" y2="-68.58" width="0.1524" layer="91"/>
+<pinref part="C11" gate="G$1" pin="1"/>
+<wire x1="63.5" y1="-68.58" x2="63.5" y2="-55.88" width="0.1524" layer="91"/>
+<junction x="63.5" y="-55.88"/>
+<pinref part="U$4" gate="G$1" pin="NC@1"/>
+<pinref part="U$4" gate="G$1" pin="SHR"/>
+<wire x1="160.02" y1="-20.32" x2="134.62" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="-20.32" x2="134.62" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="-30.48" x2="160.02" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="-20.32" x2="116.84" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="134.62" y="-20.32"/>
+<junction x="116.84" y="-20.32"/>
 </segment>
 </net>
 <net name="CH_PD" class="0">
@@ -10182,13 +10203,6 @@ a write-disabled state</text>
 <wire x1="416.56" y1="-22.86" x2="401.32" y2="-22.86" width="0.1524" layer="91"/>
 <label x="401.32" y="-22.86" size="1.778" layer="95"/>
 <pinref part="ESPDEBUG_1" gate="A" pin="3"/>
-</segment>
-</net>
-<net name="N$24" class="0">
-<segment>
-<pinref part="U$13" gate="G$1" pin="A"/>
-<pinref part="R29" gate="G$1" pin="2"/>
-<wire x1="-342.9" y1="63.5" x2="-363.22" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$26" class="0">
@@ -10419,11 +10433,6 @@ a write-disabled state</text>
 </net>
 <net name="CHARGE_EN" class="0">
 <segment>
-<pinref part="U$12" gate="G$1" pin="QP3"/>
-<wire x1="33.02" y1="-162.56" x2="12.7" y2="-162.56" width="0.1524" layer="91"/>
-<label x="12.7" y="-162.56" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U2" gate="A" pin="!EN"/>
 <wire x1="345.44" y1="-121.92" x2="365.76" y2="-121.92" width="0.1524" layer="91"/>
 <label x="347.98" y="-121.92" size="1.778" layer="95"/>
@@ -10432,17 +10441,9 @@ a write-disabled state</text>
 </net>
 <net name="N$12" class="0">
 <segment>
-<wire x1="-231.14" y1="43.18" x2="-231.14" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$16" class="0">
-<segment>
-<pinref part="U$11" gate="G$1" pin="VCC"/>
-<pinref part="U$11" gate="G$1" pin="OE"/>
-<wire x1="63.5" y1="-73.66" x2="63.5" y2="-68.58" width="0.1524" layer="91"/>
-<junction x="63.5" y="-68.58"/>
-<wire x1="63.5" y1="-68.58" x2="68.58" y2="-68.58" width="0.1524" layer="91"/>
-<pinref part="C11" gate="G$1" pin="1"/>
+<pinref part="R28" gate="G$1" pin="2"/>
+<pinref part="U$13" gate="G$1" pin="A"/>
+<wire x1="-363.22" y1="63.5" x2="-342.9" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -10459,12 +10460,15 @@ a write-disabled state</text>
 <approved hash="104,1,276.86,-33.02,X1,VCC,+3V3,,,"/>
 <approved hash="104,1,63.5,-68.58,U$11,VCC,VDD,,,"/>
 <approved hash="104,1,63.5,-132.08,U$12,VCC,VDD,,,"/>
+<approved hash="104,1,378.46,86.36,U$14,VIN,VCC,,,"/>
 <approved hash="104,1,-342.9,53.34,U$13,VCC,+3V3,,,"/>
 <approved hash="114,1,-123.065,73.5965,IC2,B,-IN,,,"/>
 <approved hash="114,1,-123.065,73.5965,IC2,B,+IN,,,"/>
 <approved hash="104,1,-124.46,81.28,IC2P,V+,+15V,,,"/>
 <approved hash="104,1,-124.46,66.04,IC2P,V-,-15V,,,"/>
+<approved hash="104,1,289.56,-116.84,U2,VSS,GND,,,"/>
 <approved hash="202,1,345.44,-116.84,U2,VDPM,,,,"/>
+<approved hash="104,1,345.44,-111.76,U2,EPAD,GND,,,"/>
 <approved hash="208,1,-78.74,73.66,VCOMMON,sup,,,,"/>
 <approved hash="208,1,-116.84,73.66,VCOMMON,out,,,,"/>
 <approved hash="208,1,121.92,-91.44,VCOMMON,sup,,,,"/>
@@ -10478,7 +10482,9 @@ a write-disabled state</text>
 <approved hash="113,1,-253.626,56.0112,INPUTBUTTONHEADER,,,,,"/>
 <approved hash="113,1,446.634,-25.2688,ESPDEBUG_2,,,,,"/>
 <approved hash="113,1,421.234,-25.2688,ESPDEBUG_1,,,,,"/>
-<approved hash="113,1,-219.897,56.0112,INPUTBUTTONHEADER1,,,,,"/>
+<approved hash="113,1,223.439,-132.211,SOLARPIN,,,,,"/>
+<approved hash="113,1,350.651,-202.152,BAT_PIN,,,,,"/>
+<approved hash="113,1,335.411,-202.857,BAT_CON,,,,,"/>
 </errors>
 </schematic>
 </drawing>
