@@ -1171,8 +1171,8 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <pin name="LE" x="-10.16" y="71.12" length="middle"/>
 <pin name="OE" x="-10.16" y="66.04" length="middle"/>
 <pin name="SHR" x="-10.16" y="60.96" length="middle"/>
-<pin name="CE1" x="-10.16" y="55.88" length="middle"/>
-<pin name="CE2" x="-10.16" y="50.8" length="middle"/>
+<pin name="NC@0" x="-10.16" y="55.88" length="middle"/>
+<pin name="NC@1" x="-10.16" y="50.8" length="middle"/>
 <pin name="SPH" x="-10.16" y="45.72" length="middle"/>
 <pin name="DO" x="-10.16" y="40.64" length="middle"/>
 <pin name="D1" x="-10.16" y="35.56" length="middle"/>
@@ -1528,8 +1528,6 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <devices>
 <device name="" package="HFQ339CT-ND">
 <connects>
-<connect gate="G$1" pin="CE1" pad="P$9"/>
-<connect gate="G$1" pin="CE2" pad="P$10"/>
 <connect gate="G$1" pin="CL" pad="P$5"/>
 <connect gate="G$1" pin="D1" pad="P$13"/>
 <connect gate="G$1" pin="D2" pad="P$14"/>
@@ -1546,6 +1544,8 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <connect gate="G$1" pin="GVDD" pad="P$23"/>
 <connect gate="G$1" pin="GVEE" pad="P$24"/>
 <connect gate="G$1" pin="LE" pad="P$6"/>
+<connect gate="G$1" pin="NC@0" pad="P$9"/>
+<connect gate="G$1" pin="NC@1" pad="P$10"/>
 <connect gate="G$1" pin="NC@2" pad="P$20"/>
 <connect gate="G$1" pin="NC@3" pad="P$21"/>
 <connect gate="G$1" pin="NC@4" pad="P$25"/>
