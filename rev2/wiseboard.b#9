@@ -2504,13 +2504,11 @@ design rules under a new name.</description>
 <attribute name="PACKAGE" value="SOT-23-3 International Rectifier" x="-82.55" y="48.26" size="1.778" layer="27" display="off"/>
 <attribute name="PRICE" value="None" x="-82.55" y="48.26" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="12k" x="-46.99" y="77.47"/>
 <element name="R10" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="1K" x="-81.28" y="64.77"/>
 <element name="R11" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="10k" x="-16.51" y="71.12"/>
 <element name="R12" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="10k" x="-22.86" y="71.12"/>
 <element name="R13" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="1K" x="-29.21" y="71.12"/>
 <element name="R14" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="1K" x="-35.56" y="71.12"/>
-<element name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="47k" x="-52.07" y="77.47"/>
 <element name="R21" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="10K" x="-41.91" y="71.12"/>
 <element name="R22" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="10K" x="-48.26" y="71.12"/>
 <element name="R23" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="1K" x="-54.61" y="71.12"/>
@@ -2603,6 +2601,7 @@ design rules under a new name.</description>
 <attribute name="PACKAGE" value="None" x="-48.26" y="48.26" size="1.778" layer="27" display="off"/>
 <attribute name="PRICE" value="0.16 USD" x="-48.26" y="48.26" size="1.778" layer="27" display="off"/>
 </element>
+<element name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="10k" x="-83.82" y="-11.43"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -2724,13 +2723,6 @@ design rules under a new name.</description>
 <wire x1="-64.45" y1="55.88" x2="-34.28" y2="83.82" width="0" layer="19" extent="1-1"/>
 <wire x1="-75.2856" y1="26.3906" x2="-64.45" y2="55.88" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="N$3">
-<contactref element="R2" pad="2"/>
-<contactref element="Q1" pad="1"/>
-<contactref element="R1" pad="2"/>
-<wire x1="-51.12" y1="77.47" x2="-46.04" y2="77.47" width="0" layer="19" extent="1-1"/>
-<wire x1="-66.99" y1="46.954" x2="-51.12" y2="77.47" width="0" layer="19" extent="1-1"/>
-</signal>
 <signal name="N$4">
 <contactref element="Q1" pad="3"/>
 <contactref element="C2" pad="1"/>
@@ -2819,9 +2811,6 @@ design rules under a new name.</description>
 <contactref element="DONE" pad="A"/>
 <contactref element="R13" pad="1"/>
 <wire x1="-34.29" y1="45.94" x2="-30.16" y2="71.12" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="BOOSTENA">
-<contactref element="R2" pad="1"/>
 </signal>
 <signal name="RXD_5V">
 <contactref element="JP1" pad="2"/>
@@ -2921,7 +2910,6 @@ design rules under a new name.</description>
 <wire x1="-66.41" y1="83.3875" x2="-83.5" y2="55.88" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VBAT">
-<contactref element="R1" pad="1"/>
 <contactref element="Q1" pad="2"/>
 <contactref element="D2" pad="A"/>
 <contactref element="C8" pad="1"/>
@@ -2931,15 +2919,16 @@ design rules under a new name.</description>
 <contactref element="POWERGOOD" pad="A"/>
 <contactref element="CHRG/LBO" pad="A"/>
 <contactref element="U3" pad="4"/>
+<contactref element="R2" pad="1"/>
+<wire x1="-74.93" y1="2.76" x2="-84.77" y2="-11.43" width="0" layer="19" extent="1-1"/>
 <wire x1="-45.72" y1="23.08" x2="-74.93" y2="2.76" width="0" layer="19" extent="1-1"/>
 <wire x1="-37.1" y1="22.97" x2="-45.72" y2="23.08" width="0" layer="19" extent="1-1"/>
 <wire x1="-25.32" y1="19.16" x2="-37.1" y2="22.97" width="0" layer="19" extent="1-1"/>
 <wire x1="-65.09" y1="46.954" x2="-45.72" y2="23.08" width="0" layer="19" extent="1-1"/>
 <wire x1="-56.83" y1="64.77" x2="-65.09" y2="46.954" width="0" layer="19" extent="1-1"/>
-<wire x1="-47.94" y1="77.47" x2="-56.83" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="-30.48" y1="82.55" x2="-47.94" y2="77.47" width="0" layer="19" extent="1-1"/>
 <wire x1="-75.1713" y1="83.55" x2="-56.83" y2="64.77" width="0" layer="19" extent="1-1"/>
 <wire x1="-80.7" y1="82.55" x2="-75.1713" y2="83.55" width="0" layer="19" extent="1-1"/>
+<wire x1="-30.48" y1="82.55" x2="-56.83" y2="64.77" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="OE">
 <contactref element="U$4" pad="P$7"/>
@@ -3147,8 +3136,12 @@ design rules under a new name.</description>
 <signal name="N$41">
 <contactref element="U3" pad="33"/>
 </signal>
-<signal name="N$44">
+<signal name="SUP_CTRL">
 <contactref element="U3" pad="11"/>
+<contactref element="Q1" pad="1"/>
+<contactref element="R2" pad="2"/>
+<wire x1="-34.21" y1="19.16" x2="-82.87" y2="-11.43" width="0" layer="19" extent="1-1"/>
+<wire x1="-66.99" y1="46.954" x2="-34.21" y2="19.16" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$46">
 <contactref element="U3" pad="8"/>

@@ -11472,13 +11472,6 @@ a write-disabled state</text>
 <label x="223.52" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$19" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="SHD"/>
-<wire x1="233.68" y1="-2.54" x2="223.52" y2="-2.54" width="0.1524" layer="91"/>
-<label x="223.52" y="-2.54" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="N$20" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="SWP"/>

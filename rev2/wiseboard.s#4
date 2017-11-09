@@ -11429,6 +11429,11 @@ a write-disabled state</text>
 <wire x1="162.56" y1="76.2" x2="172.72" y2="76.2" width="0.1524" layer="91"/>
 <label x="170.18" y="76.2" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="SDO"/>
+<wire x1="233.68" y1="-12.7" x2="223.52" y2="-12.7" width="0.1524" layer="91"/>
+<label x="223.52" y="-12.7" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="CLK" class="0">
 <segment>
@@ -11478,13 +11483,6 @@ a write-disabled state</text>
 <segment>
 <pinref part="U3" gate="G$1" pin="SWP"/>
 <wire x1="233.68" y1="-5.08" x2="223.52" y2="-5.08" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$34" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="SDO"/>
-<wire x1="233.68" y1="-12.7" x2="223.52" y2="-12.7" width="0.1524" layer="91"/>
-<label x="223.52" y="-12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

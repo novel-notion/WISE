@@ -2470,7 +2470,6 @@ design rules under a new name.</description>
 <element name="BAT_PIN" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X02" value="" x="-29.21" y="82.55"/>
 <element name="BOOT" library="adafruit" package="CHIP-LED0805" value="GREEN" x="-27.94" y="46.99"/>
 <element name="C1" library="resistor" library_urn="urn:adsk.eagle:library:348" package="C0805" value="100nF" x="-57.15" y="55.88"/>
-<element name="C16" library="resistor" library_urn="urn:adsk.eagle:library:348" package="C0805" value="2u2F" x="-68.58" y="64.77"/>
 <element name="C2" library="resistor" library_urn="urn:adsk.eagle:library:348" package="C0805" value="2u2F" x="-49.53" y="64.77"/>
 <element name="C3" library="resistor" library_urn="urn:adsk.eagle:library:348" package="C0805" value="100nF" x="-63.5" y="55.88"/>
 <element name="C4" library="resistor" library_urn="urn:adsk.eagle:library:348" package="C0805" value="100pF" x="-69.85" y="55.88"/>
@@ -2495,14 +2494,6 @@ design rules under a new name.</description>
 <attribute name="MP" value="IRLML6402" x="-66.04" y="48.26" size="1.778" layer="27" display="off"/>
 <attribute name="PACKAGE" value="SOT-23-3 International Rectifier" x="-66.04" y="48.26" size="1.778" layer="27" display="off"/>
 <attribute name="PRICE" value="None" x="-66.04" y="48.26" size="1.778" layer="27" display="off"/>
-</element>
-<element name="Q2" library="IRLML6402" package="SOT23" value="IRLML6402TRPBF" x="-82.55" y="48.26">
-<attribute name="AVAILABILITY" value="Unavailable" x="-82.55" y="48.26" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value="MOSFETs, Semiconductors and Actives, mosfet, Transistors, Discretes (diodes, transistors, thyristors ...)" x="-82.55" y="48.26" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="International Rectifier" x="-82.55" y="48.26" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="IRLML6402" x="-82.55" y="48.26" size="1.778" layer="27" display="off"/>
-<attribute name="PACKAGE" value="SOT-23-3 International Rectifier" x="-82.55" y="48.26" size="1.778" layer="27" display="off"/>
-<attribute name="PRICE" value="None" x="-82.55" y="48.26" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R10" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="1K" x="-81.28" y="64.77"/>
 <element name="R11" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="10k" x="-16.51" y="71.12"/>
@@ -2639,7 +2630,6 @@ design rules under a new name.</description>
 <contactref element="U$4" pad="P$9"/>
 <contactref element="U$4" pad="P$34"/>
 <contactref element="U$4" pad="P$31"/>
-<contactref element="C16" pad="2"/>
 <contactref element="R35" pad="2"/>
 <contactref element="BAT_CON" pad="2"/>
 <contactref element="DONE" pad="C"/>
@@ -2679,13 +2669,10 @@ design rules under a new name.</description>
 <wire x1="-48.58" y1="64.77" x2="-42.23" y2="64.77" width="0" layer="19" extent="1-1"/>
 <wire x1="-54.93" y1="64.77" x2="-48.58" y2="64.77" width="0" layer="19" extent="1-1"/>
 <wire x1="-61.28" y1="64.77" x2="-54.93" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="-67.63" y1="64.77" x2="-61.28" y2="64.77" width="0" layer="19" extent="1-1"/>
 <wire x1="-56.2" y1="55.88" x2="-54.93" y2="64.77" width="0" layer="19" extent="1-1"/>
 <wire x1="-50.06" y1="47.26" x2="-56.2" y2="55.88" width="0" layer="19" extent="1-1"/>
 <wire x1="-35.57" y1="55.88" x2="-42.23" y2="64.77" width="0" layer="19" extent="1-1"/>
 <wire x1="-34.29" y1="48.04" x2="-35.57" y2="55.88" width="0" layer="19" extent="1-1"/>
-<wire x1="-75.25" y1="55.88" x2="-67.63" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="-81.6" y1="55.88" x2="-75.25" y2="55.88" width="0" layer="19" extent="1-1"/>
 <wire x1="-33.7312" y1="35.8394" x2="-34.29" y2="48.04" width="0" layer="19" extent="1-1"/>
 <wire x1="-27.2288" y1="35.8394" x2="-33.7312" y2="35.8394" width="0" layer="19" extent="1-1"/>
 <wire x1="-22.3012" y1="35.8394" x2="-27.2288" y2="35.8394" width="0" layer="19" extent="1-1"/>
@@ -2703,6 +2690,8 @@ design rules under a new name.</description>
 <wire x1="-56.515" y1="6.41" x2="-56.515" y2="1.21" width="0" layer="19" extent="1-1"/>
 <wire x1="-55.245" y1="6.41" x2="-56.515" y2="6.41" width="0" layer="19" extent="1-1"/>
 <wire x1="-64.135" y1="6.41" x2="-56.515" y2="6.41" width="0" layer="19" extent="1-1"/>
+<wire x1="-75.25" y1="55.88" x2="-61.28" y2="64.77" width="0" layer="19" extent="1-1"/>
+<wire x1="-81.6" y1="55.88" x2="-75.25" y2="55.88" width="0" layer="19" extent="1-1"/>
 <wire x1="-75.2856" y1="24.892" x2="-64.135" y2="6.41" width="0" layer="19" extent="1-1"/>
 <wire x1="-75.2856" y1="25.908" x2="-75.2856" y2="24.892" width="0" layer="19" extent="1-1"/>
 <wire x1="-79.6544" y1="25.4" x2="-75.2856" y2="24.892" width="0" layer="19" extent="1-1"/>
@@ -2837,8 +2826,6 @@ design rules under a new name.</description>
 <signal name="+3V3">
 <contactref element="U$14" pad="5"/>
 <contactref element="R21" pad="2"/>
-<contactref element="C16" pad="1"/>
-<contactref element="Q2" pad="2"/>
 <contactref element="R30" pad="2"/>
 <contactref element="R31" pad="2"/>
 <contactref element="R32" pad="2"/>
@@ -2867,8 +2854,6 @@ design rules under a new name.</description>
 <wire x1="-82.52" y1="78.42" x2="-71.81" y2="83.3875" width="0" layer="19" extent="1-1"/>
 <wire x1="-79.06" y1="71.12" x2="-82.52" y2="78.42" width="0" layer="19" extent="1-1"/>
 <wire x1="-72.71" y1="71.12" x2="-79.06" y2="71.12" width="0" layer="19" extent="1-1"/>
-<wire x1="-69.53" y1="64.77" x2="-72.71" y2="71.12" width="0" layer="19" extent="1-1"/>
-<wire x1="-81.6" y1="46.954" x2="-69.53" y2="64.77" width="0" layer="19" extent="1-1"/>
 <wire x1="-27.94" y1="45.94" x2="-40.96" y2="71.12" width="0" layer="19" extent="1-1"/>
 <wire x1="-47.625" y1="6.41" x2="-27.94" y2="45.94" width="0" layer="19" extent="1-1"/>
 <wire x1="-45.085" y1="1.21" x2="-47.625" y2="6.41" width="0" layer="19" extent="1-1"/>
@@ -2966,9 +2951,6 @@ design rules under a new name.</description>
 <contactref element="U3" pad="37"/>
 <wire x1="-61.61" y1="83.3875" x2="-63.11" y2="81.35" width="0" layer="19" extent="1-1"/>
 <wire x1="-22.78" y1="1.16" x2="-63.11" y2="81.35" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="VDD">
-<contactref element="Q2" pad="3"/>
 </signal>
 <signal name="N$27">
 <contactref element="S3" pad="1"/>

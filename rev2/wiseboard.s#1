@@ -9995,6 +9995,9 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C10" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="10uF"/>
 <part name="GND27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="10uF"/>
+<part name="R17" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" value="10K"/>
+<part name="R18" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" value="10K"/>
+<part name="GND28" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10196,6 +10199,9 @@ a write-disabled state</text>
 <instance part="C10" gate="G$1" x="365.76" y="-109.22"/>
 <instance part="GND27" gate="1" x="365.76" y="-101.6" rot="R180"/>
 <instance part="C8" gate="G$1" x="261.62" y="-99.06"/>
+<instance part="R17" gate="G$1" x="327.66" y="-35.56" rot="R90"/>
+<instance part="R18" gate="G$1" x="327.66" y="-45.72" rot="R90"/>
+<instance part="GND28" gate="1" x="327.66" y="-58.42"/>
 </instances>
 <busses>
 </busses>
@@ -10443,6 +10449,11 @@ a write-disabled state</text>
 <pinref part="GND27" gate="1" pin="GND"/>
 <wire x1="365.76" y1="-104.14" x2="365.76" y2="-106.68" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R18" gate="G$1" pin="1"/>
+<pinref part="GND28" gate="1" pin="GND"/>
+<wire x1="327.66" y1="-55.88" x2="327.66" y2="-50.8" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -10636,9 +10647,18 @@ a write-disabled state</text>
 <wire x1="231.14" y1="-129.54" x2="226.06" y2="-129.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U3" gate="G$1" pin="SENSOR_VN"/>
-<wire x1="269.24" y1="-53.34" x2="276.86" y2="-53.34" width="0.1524" layer="91"/>
-<label x="274.32" y="-53.34" size="1.778" layer="95"/>
+<pinref part="D1" gate="G$1" pin="C"/>
+<pinref part="U2" gate="A" pin="VBUS"/>
+<wire x1="248.92" y1="-111.76" x2="261.62" y2="-111.76" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="-111.76" x2="289.56" y2="-111.76" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="-111.76" x2="261.62" y2="-104.14" width="0.1524" layer="91"/>
+<junction x="261.62" y="-111.76"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="2"/>
+<wire x1="327.66" y1="-25.4" x2="327.66" y2="-30.48" width="0.1524" layer="91"/>
+<label x="327.66" y="-30.48" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -11106,17 +11126,6 @@ a write-disabled state</text>
 <wire x1="378.46" y1="-134.62" x2="378.46" y2="-129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$13" class="0">
-<segment>
-<pinref part="D1" gate="G$1" pin="C"/>
-<pinref part="U2" gate="A" pin="VBUS"/>
-<wire x1="248.92" y1="-111.76" x2="261.62" y2="-111.76" width="0.1524" layer="91"/>
-<wire x1="261.62" y1="-111.76" x2="289.56" y2="-111.76" width="0.1524" layer="91"/>
-<wire x1="261.62" y1="-111.76" x2="261.62" y2="-104.14" width="0.1524" layer="91"/>
-<junction x="261.62" y="-111.76"/>
-<pinref part="C8" gate="G$1" pin="2"/>
-</segment>
-</net>
 <net name="N$17" class="0">
 <segment>
 <pinref part="U2" gate="A" pin="ISET"/>
@@ -11415,6 +11424,20 @@ a write-disabled state</text>
 <pinref part="U3" gate="G$1" pin="SENSOR_VP"/>
 <wire x1="269.24" y1="-50.8" x2="276.86" y2="-50.8" width="0.1524" layer="91"/>
 <label x="274.32" y="-50.8" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="PANEL_SENS" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="SENSOR_VN"/>
+<wire x1="269.24" y1="-53.34" x2="276.86" y2="-53.34" width="0.1524" layer="91"/>
+<label x="274.32" y="-53.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="314.96" y1="-40.64" x2="327.66" y2="-40.64" width="0.1524" layer="91"/>
+<pinref part="R17" gate="G$1" pin="1"/>
+<pinref part="R18" gate="G$1" pin="2"/>
+<junction x="327.66" y="-40.64"/>
+<label x="307.34" y="-40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

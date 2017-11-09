@@ -10071,6 +10071,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="R12" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" value="10k"/>
+<part name="+3V3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10260,6 +10261,7 @@ a write-disabled state</text>
 <instance part="R12" gate="G$1" x="-304.8" y="-45.72" rot="R90"/>
 <instance part="GND23" gate="1" x="-309.88" y="-58.42"/>
 <instance part="R2" gate="G$1" x="-365.76" y="-33.02" rot="R270"/>
+<instance part="+3V3" gate="G$1" x="223.52" y="12.7" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -10808,6 +10810,16 @@ a write-disabled state</text>
 <wire x1="116.84" y1="-127" x2="116.84" y2="-119.38" width="0.1524" layer="91"/>
 <junction x="116.84" y="-127"/>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="EN"/>
+<wire x1="233.68" y1="12.7" x2="231.14" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
+<pinref part="U3" gate="G$1" pin="3V3"/>
+<wire x1="231.14" y1="12.7" x2="226.06" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="15.24" x2="231.14" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="15.24" x2="231.14" y2="12.7" width="0.1524" layer="91"/>
+<junction x="231.14" y="12.7"/>
 </segment>
 </net>
 <net name="RXD" class="0">
