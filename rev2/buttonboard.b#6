@@ -142,8 +142,6 @@
 </layers>
 <board>
 <plain>
-<text x="8.89" y="30.48" size="1.778" layer="21">-</text>
-<text x="15.875" y="30.48" size="1.778" layer="21">+</text>
 <polygon width="0.001" layer="30">
 <vertex x="10.5853" y="-0.9673"/>
 <vertex x="10.5479" y="-0.8551"/>
@@ -1579,6 +1577,16 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 </package>
 </packages>
 </library>
+<library name="WISE">
+<packages>
+<package name="EDGE_CON_2">
+<smd name="2" x="-1.27" y="1.524" dx="1.016" dy="3.048" layer="1"/>
+<smd name="1" x="1.27" y="1.524" dx="1.016" dy="3.048" layer="1"/>
+<text x="-2.54" y="-1.27" size="1.27" layer="27" font="vector">&gt;Value</text>
+<text x="1.524" y="1.524" size="1.4224" layer="21" ratio="12" rot="R270">+</text>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1826,6 +1834,7 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="36M3542" x="12.7" y="12.065" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="9.652" y="6.985" size="1.27" layer="27" ratio="10"/>
 </element>
+<element name="U$1" library="WISE" package="EDGE_CON_2" value="EDGE_CON" x="-10.795" y="-1.27"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -1889,6 +1898,7 @@ design rules under a new name.</description>
 <contactref element="S5" pad="3"/>
 <contactref element="S5" pad="4"/>
 <contactref element="R1" pad="1"/>
+<contactref element="U$1" pad="2"/>
 <wire x1="15.9512" y1="17.4244" x2="19.37" y2="20.32" width="0" layer="19" extent="1-1"/>
 <wire x1="19.3294" y1="15.3162" x2="15.9512" y2="17.4244" width="0" layer="19" extent="1-1"/>
 <wire x1="15.9512" y1="9.8044" x2="19.3294" y2="15.3162" width="0" layer="19" extent="1-1"/>
@@ -1899,6 +1909,7 @@ design rules under a new name.</description>
 <wire x1="9.4488" y1="2.1844" x2="15.9512" y2="2.1844" width="0" layer="19" extent="1-1"/>
 <wire x1="1.5494" y1="8.8138" x2="9.4488" y2="9.8044" width="0" layer="19" extent="1-1"/>
 <wire x1="1.5494" y1="15.3162" x2="1.5494" y2="8.8138" width="0" layer="19" extent="1-1"/>
+<wire x1="-12.065" y1="0.254" x2="1.5494" y2="8.8138" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
