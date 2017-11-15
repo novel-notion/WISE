@@ -1738,12 +1738,6 @@ Source: http://www.osram.convergy.de/</description>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
-<symbol name="VCC">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="+3V3">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
@@ -1756,25 +1750,18 @@ Source: http://www.osram.convergy.de/</description>
 <text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="VBAT" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="+5V" library_version="1">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VCC" prefix="P+">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="VCC" symbol="VCC" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -1800,6 +1787,19 @@ Source: http://www.osram.convergy.de/</description>
 <deviceset name="VBAT" prefix="VBAT">
 <gates>
 <gate name="G$1" symbol="VBAT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="+5V" prefix="P+" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="+5V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -2285,7 +2285,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <smd name="2" x="-1.27" y="1.524" dx="1.016" dy="3.048" layer="1"/>
 <smd name="1" x="1.27" y="1.524" dx="1.016" dy="3.048" layer="1"/>
 <text x="-2.54" y="-1.27" size="1.27" layer="27" font="vector">&gt;Value</text>
-<text x="1.524" y="1.524" size="1.4224" layer="21" ratio="12" rot="R270">+</text>
+<text x="1.651" y="1.016" size="1.4224" layer="21" font="vector" ratio="12" rot="R90" align="top-left">+</text>
 </package>
 <package name="EDGE_CON_4">
 <smd name="2" x="0" y="0.254" dx="1.016" dy="3.048" layer="1"/>
@@ -9511,7 +9511,6 @@ Source: AVX .. aphvc.pdf</description>
 <part name="DONE" library="adafruit" deviceset="LED" device="CHIP-LED0805" value="LED4"/>
 <part name="CHRG/LBO" library="adafruit" deviceset="LED" device="CHIP-LED0805" value="LED3"/>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="D2" library="adafruit" deviceset="DIODE" device="SOD-123" value="MBR120"/>
 <part name="GND32" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
@@ -9555,7 +9554,6 @@ Source: AVX .. aphvc.pdf</description>
 <part name="R38" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" value="7.6k"/>
 <part name="R10" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" value="1K"/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="IC5" library="WISE" deviceset="W25Q32JVSSIQ" device="" value="W25Q"/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
@@ -9582,6 +9580,8 @@ Source: AVX .. aphvc.pdf</description>
 <part name="J2" library="WISE" deviceset="EDGE_CON_2" device="2PIN" value="SOL_CON"/>
 <part name="J3" library="WISE" deviceset="EDGE_CON_4" device="" value="PROG_HEADER"/>
 <part name="J4" library="WISE" deviceset="EDGE_CON_2" device="2PIN" value="BUT_CON"/>
+<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9678,7 +9678,6 @@ a write-disabled state</text>
 <instance part="DONE" gate="G$1" x="264.16" y="-134.62"/>
 <instance part="CHRG/LBO" gate="G$1" x="248.92" y="-137.16" rot="R180"/>
 <instance part="GND25" gate="1" x="185.42" y="81.28" rot="R180"/>
-<instance part="P+10" gate="VCC" x="190.5" y="76.2" rot="R270"/>
 <instance part="D2" gate="G$1" x="-99.06" y="73.66" rot="R270"/>
 <instance part="GND32" gate="1" x="-86.36" y="66.04" rot="R270"/>
 <instance part="+3V1" gate="G$1" x="-38.1" y="71.12" rot="R270"/>
@@ -9723,7 +9722,6 @@ a write-disabled state</text>
 <instance part="R38" gate="G$1" x="147.32" y="-134.62" rot="R90"/>
 <instance part="R10" gate="G$1" x="220.98" y="-129.54" rot="R90"/>
 <instance part="GND15" gate="1" x="236.22" y="-139.7"/>
-<instance part="P+2" gate="VCC" x="-91.44" y="88.9"/>
 <instance part="IC5" gate="G$1" x="88.9" y="83.82"/>
 <instance part="GND20" gate="1" x="58.42" y="76.2" rot="R270"/>
 <instance part="+3V13" gate="G$1" x="121.92" y="91.44" rot="R270"/>
@@ -9750,6 +9748,8 @@ a write-disabled state</text>
 <instance part="J2" gate="G$1" x="93.98" y="-111.76" rot="R180"/>
 <instance part="J3" gate="G$1" x="162.56" y="73.66" rot="R180"/>
 <instance part="J4" gate="G$1" x="177.8" y="-2.54"/>
+<instance part="P+1" gate="1" x="-91.44" y="88.9"/>
+<instance part="P+3" gate="1" x="190.5" y="76.2" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -9972,26 +9972,6 @@ a write-disabled state</text>
 <pinref part="J4" gate="G$1" pin="1"/>
 <wire x1="175.26" y1="-2.54" x2="162.56" y2="-2.54" width="0.1524" layer="91"/>
 <label x="162.56" y="-2.54" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="VCC" class="0">
-<segment>
-<wire x1="162.56" y1="76.2" x2="187.96" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="P+10" gate="VCC" pin="VCC"/>
-<pinref part="J3" gate="G$1" pin="3"/>
-</segment>
-<segment>
-<pinref part="IC8" gate="G$1" pin="VIN"/>
-<wire x1="-73.66" y1="71.12" x2="-91.44" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="-91.44" y1="71.12" x2="-99.06" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="-99.06" y1="71.12" x2="-99.06" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="D2" gate="G$1" pin="C"/>
-<junction x="-99.06" y="71.12"/>
-<pinref part="R22" gate="G$1" pin="1"/>
-<wire x1="-99.06" y1="60.96" x2="-83.82" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="P+2" gate="VCC" pin="VCC"/>
-<wire x1="-91.44" y1="86.36" x2="-91.44" y2="71.12" width="0.1524" layer="91"/>
-<junction x="-91.44" y="71.12"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -10844,29 +10824,45 @@ a write-disabled state</text>
 <label x="144.78" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
+<net name="+5V" class="0">
+<segment>
+<wire x1="162.56" y1="76.2" x2="187.96" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="J3" gate="G$1" pin="3"/>
+<pinref part="P+3" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="IC8" gate="G$1" pin="VIN"/>
+<wire x1="-73.66" y1="71.12" x2="-91.44" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-91.44" y1="71.12" x2="-99.06" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="71.12" x2="-99.06" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="D2" gate="G$1" pin="C"/>
+<junction x="-99.06" y="71.12"/>
+<pinref part="R22" gate="G$1" pin="1"/>
+<wire x1="-99.06" y1="60.96" x2="-83.82" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-91.44" y1="86.36" x2="-91.44" y2="71.12" width="0.1524" layer="91"/>
+<junction x="-91.44" y="71.12"/>
+<pinref part="P+1" gate="1" pin="+5V"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 <errors>
 <approved hash="102,1,-43.18,71.12,VOUT,+3V3,,,,"/>
+<approved hash="104,1,-279.4,-27.94,IC1,VIN,N$4,,,"/>
 <approved hash="104,1,-129.54,-66.04,IC4,VOUT,+15V,,,"/>
 <approved hash="104,1,-129.54,2.54,IC3,VOUT,-15V,,,"/>
-<approved hash="104,1,-73.66,71.12,U$14,VIN,VCC,,,"/>
 <approved hash="114,1,-187.96,76.1365,IC2,B,-IN,,,"/>
 <approved hash="114,1,-187.96,76.1365,IC2,B,+IN,,,"/>
-<approved hash="104,1,-187.96,83.82,IC2P,V+,+15V,,,"/>
-<approved hash="104,1,-187.96,68.58,IC2P,V-,-15V,,,"/>
-<approved hash="104,1,160.02,-114.3,U2,VSS,GND,,,"/>
-<approved hash="202,1,215.9,-114.3,U2,VDPM,,,,"/>
-<approved hash="104,1,215.9,-109.22,U2,EPAD,GND,,,"/>
+<approved hash="204,1,-187.96,83.82,IC2P,V+,,,,"/>
+<approved hash="204,1,-187.96,68.58,IC2P,V-,,,,"/>
+<approved hash="202,1,215.9,-114.3,IC9,VDPM,,,,"/>
 <approved hash="106,1,139.7,7.62,N$7,,,,,"/>
 <approved hash="106,1,139.7,-2.54,N$37,,,,,"/>
-<approved hash="106,1,139.7,-40.64,N$46,,,,,"/>
 <approved hash="106,1,139.7,-45.72,N$48,,,,,"/>
 <approved hash="106,1,139.7,-48.26,N$49,,,,,"/>
-<approved hash="113,1,93.8989,-129.671,SOLARPIN,,,,,"/>
-<approved hash="113,1,221.111,-199.612,BAT_PIN,,,,,"/>
-<approved hash="113,1,205.871,-200.317,BAT_CON,,,,,"/>
+<approved hash="111,1,-187.96,83.82,+15V,,,,,"/>
+<approved hash="111,1,-187.96,68.58,-15V,,,,,"/>
 </errors>
 </schematic>
 </drawing>
