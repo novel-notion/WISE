@@ -1791,7 +1791,7 @@ design rules under a new name.</description>
 <element name="R5" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="12k" x="5.715" y="3.175" smashed="yes">
 <attribute name="NAME" x="5.08" y="4.445" size="1.27" layer="25"/>
 </element>
-<element name="R6" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="33k" x="5.715" y="5.08" smashed="yes" rot="R180">
+<element name="R6" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0805" value="39k" x="5.715" y="5.08" smashed="yes" rot="R180">
 <attribute name="NAME" x="6.985" y="7.62" size="1.27" layer="25" rot="R180"/>
 </element>
 <element name="S1" library="switch-omron" library_urn="urn:adsk.eagle:library:377" package="B3F-10XX" value="" x="12.7" y="19.685" smashed="yes">

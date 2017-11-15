@@ -9476,14 +9476,14 @@ Source: AVX .. aphvc.pdf</description>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="IC1" library="LTC_By_element14_Batch_1" deviceset="LT1945EMSPBF" device="" value="LT1945"/>
-<part name="Q1" library="IRLML6402" deviceset="IRLML6402" device="TRPBF"/>
+<part name="Q1" library="IRLML6402" deviceset="IRLML6402" device="TRPBF" value="IRLM"/>
 <part name="IC4" library="WISE" deviceset="L78L15" device="" value="L78L15"/>
 <part name="IC3" library="WISE" deviceset="L79L15" device="" value="L79L15"/>
-<part name="C1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="100nF"/>
+<part name="C1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="1uF"/>
 <part name="22" library="WISE" deviceset="587-2103-1-ND" device=""/>
-<part name="C2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="2u2F"/>
+<part name="C2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="1uF"/>
 <part name="U$5" library="WISE" deviceset="587-2103-1-ND" device=""/>
-<part name="C3" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="100nF"/>
+<part name="C3" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="1uF"/>
 <part name="D4" library="WISE" deviceset="SS24" device=""/>
 <part name="D5" library="WISE" deviceset="SS24" device=""/>
 <part name="C4" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="10uF"/>
@@ -9498,7 +9498,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C5" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="10uF"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C6" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="100nF"/>
+<part name="C6" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="1uF"/>
 <part name="R8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" value="39k"/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -9580,7 +9580,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="SW2" library="adafruit" deviceset="SPST_TACT" device="-KMR2"/>
 <part name="J1" library="WISE" deviceset="EDGE_CON_2" device="2PIN" value="BAT_CON"/>
 <part name="J2" library="WISE" deviceset="EDGE_CON_2" device="2PIN" value="SOL_CON"/>
-<part name="J3" library="WISE" deviceset="EDGE_CON_4" device=""/>
+<part name="J3" library="WISE" deviceset="EDGE_CON_4" device="" value="PROG_HEADER"/>
 </parts>
 <sheets>
 <sheet>
@@ -9605,9 +9605,9 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-43.18" y1="-129.54" x2="-43.18" y2="27.94" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="-43.18" y1="27.94" x2="-408.94" y2="27.94" width="0.1524" layer="94" style="shortdash"/>
 <text x="-215.9" y="30.48" size="3.81" layer="94">Voltage Generation</text>
-<wire x1="81.28" y1="-76.2" x2="81.28" y2="-218.44" width="0.1524" layer="94" style="shortdash"/>
-<wire x1="81.28" y1="-218.44" x2="279.4" y2="-218.44" width="0.1524" layer="94" style="shortdash"/>
-<wire x1="279.4" y1="-218.44" x2="279.4" y2="-76.2" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="81.28" y1="-76.2" x2="81.28" y2="-170.18" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="81.28" y1="-170.18" x2="279.4" y2="-170.18" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="279.4" y1="-170.18" x2="279.4" y2="-76.2" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="279.4" y1="-76.2" x2="81.28" y2="-76.2" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="81.28" y1="27.94" x2="243.84" y2="27.94" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="243.84" y1="27.94" x2="243.84" y2="-66.04" width="0.1524" layer="94" style="shortdash"/>

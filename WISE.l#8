@@ -1108,10 +1108,10 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
 </package>
 <package name="EDGE_CON_2">
-<smd name="2" x="-1.27" y="0" dx="1" dy="4.6" layer="1"/>
-<smd name="1" x="1.27" y="0" dx="1" dy="4.6" layer="1"/>
-<text x="-3.81" y="-3.81" size="1.27" layer="27" font="vector">&gt;Value</text>
-<text x="1.524" y="-1.016" size="1.4224" layer="21" ratio="12" rot="R270">+</text>
+<smd name="2" x="-1.27" y="1.524" dx="1.016" dy="3.048" layer="1"/>
+<smd name="1" x="1.27" y="1.524" dx="1.016" dy="3.048" layer="1"/>
+<text x="-2.54" y="-1.27" size="1.27" layer="27" font="vector">&gt;Value</text>
+<text x="1.524" y="1.524" size="1.4224" layer="21" ratio="12" rot="R270">+</text>
 </package>
 </packages>
 <symbols>
@@ -1927,8 +1927,8 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <devices>
 <device name="" package="EDGE_CON_2">
 <connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="1" pad="2"/>
+<connect gate="G$1" pin="2" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>

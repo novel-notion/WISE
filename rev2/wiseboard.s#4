@@ -9476,14 +9476,14 @@ Source: AVX .. aphvc.pdf</description>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="IC1" library="LTC_By_element14_Batch_1" deviceset="LT1945EMSPBF" device="" value="LT1945"/>
-<part name="Q1" library="IRLML6402" deviceset="IRLML6402" device="TRPBF"/>
+<part name="Q1" library="IRLML6402" deviceset="IRLML6402" device="TRPBF" value="IRLM"/>
 <part name="IC4" library="WISE" deviceset="L78L15" device="" value="L78L15"/>
 <part name="IC3" library="WISE" deviceset="L79L15" device="" value="L79L15"/>
-<part name="C1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="100nF"/>
+<part name="C1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="1uF"/>
 <part name="22" library="WISE" deviceset="587-2103-1-ND" device=""/>
-<part name="C2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="2u2F"/>
+<part name="C2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="1uF"/>
 <part name="U$5" library="WISE" deviceset="587-2103-1-ND" device=""/>
-<part name="C3" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="100nF"/>
+<part name="C3" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="1uF"/>
 <part name="D4" library="WISE" deviceset="SS24" device=""/>
 <part name="D5" library="WISE" deviceset="SS24" device=""/>
 <part name="C4" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="10uF"/>
@@ -9498,7 +9498,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C5" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="10uF"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C6" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="100nF"/>
+<part name="C6" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0805" value="1uF"/>
 <part name="R8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" value="39k"/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -9524,7 +9524,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="BOOT" library="adafruit" deviceset="LED" device="CHIP-LED0805" value="LED1"/>
 <part name="R23" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" value="1K"/>
 <part name="+3V5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="U$14" library="WISE" deviceset="AP2112" device="" value="AP2112K-3.3TRG1DICT-ND"/>
+<part name="IC8" library="WISE" deviceset="AP2112" device="" value="IC6"/>
 <part name="U$4" library="WISE" deviceset="FH26W-39S" device=""/>
 <part name="GND36" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND37" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -9539,7 +9539,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="IC2" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="LM358" device="MX" value="LM358"/>
 <part name="U$18" library="WISE" deviceset="VBAT" device=""/>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U2" library="WISE" deviceset="BQ24210DQCT" device=""/>
+<part name="IC9" library="WISE" deviceset="BQ24210DQCT" device=""/>
 <part name="GND47" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U$20" library="WISE" deviceset="VBAT" device=""/>
 <part name="GND48" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -9580,7 +9580,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="SW2" library="adafruit" deviceset="SPST_TACT" device="-KMR2"/>
 <part name="J1" library="WISE" deviceset="EDGE_CON_2" device="2PIN" value="BAT_CON"/>
 <part name="J2" library="WISE" deviceset="EDGE_CON_2" device="2PIN" value="SOL_CON"/>
-<part name="J3" library="WISE" deviceset="EDGE_CON_4" device=""/>
+<part name="J3" library="WISE" deviceset="EDGE_CON_4" device="" value="PROG_HEADER"/>
 </parts>
 <sheets>
 <sheet>
@@ -9690,7 +9690,7 @@ a write-disabled state</text>
 <instance part="BOOT" gate="G$1" x="0" y="93.98"/>
 <instance part="R23" gate="G$1" x="0" y="78.74" rot="R90"/>
 <instance part="+3V5" gate="G$1" x="0" y="109.22"/>
-<instance part="U$14" gate="G$1" x="-58.42" y="66.04"/>
+<instance part="IC8" gate="G$1" x="-58.42" y="66.04"/>
 <instance part="U$4" gate="G$1" x="45.72" y="-81.28" smashed="yes"/>
 <instance part="GND36" gate="1" x="20.32" y="20.32" rot="R270"/>
 <instance part="GND37" gate="1" x="25.4" y="-182.88" rot="R270"/>
@@ -9706,7 +9706,7 @@ a write-disabled state</text>
 <instance part="IC2" gate="P" x="-187.96" y="76.2"/>
 <instance part="U$18" gate="G$1" x="109.22" y="-127" rot="R270"/>
 <instance part="GND16" gate="1" x="109.22" y="-132.08"/>
-<instance part="U2" gate="A" x="157.48" y="-109.22"/>
+<instance part="IC9" gate="A" x="157.48" y="-109.22"/>
 <instance part="GND47" gate="1" x="137.16" y="-142.24"/>
 <instance part="U$20" gate="G$1" x="248.92" y="-111.76" rot="R270"/>
 <instance part="GND48" gate="1" x="264.16" y="-144.78"/>
@@ -9845,7 +9845,7 @@ a write-disabled state</text>
 <segment>
 <wire x1="-73.66" y1="66.04" x2="-83.82" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="GND32" gate="1" pin="GND"/>
-<pinref part="U$14" gate="G$1" pin="GND"/>
+<pinref part="IC8" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <wire x1="-2.54" y1="50.8" x2="0" y2="50.8" width="0.1524" layer="91"/>
@@ -9907,7 +9907,7 @@ a write-disabled state</text>
 <pinref part="C8" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U2" gate="A" pin="EPAD"/>
+<pinref part="IC9" gate="A" pin="EPAD"/>
 <pinref part="GND21" gate="1" pin="GND"/>
 <wire x1="223.52" y1="-109.22" x2="215.9" y2="-109.22" width="0.1524" layer="91"/>
 </segment>
@@ -9917,7 +9917,7 @@ a write-disabled state</text>
 <wire x1="137.16" y1="-139.7" x2="137.16" y2="-121.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U2" gate="A" pin="VSS"/>
+<pinref part="IC9" gate="A" pin="VSS"/>
 <pinref part="GND49" gate="1" pin="GND"/>
 <wire x1="147.32" y1="-114.3" x2="160.02" y2="-114.3" width="0.1524" layer="91"/>
 </segment>
@@ -9928,7 +9928,7 @@ a write-disabled state</text>
 </segment>
 <segment>
 <pinref part="GND15" gate="1" pin="GND"/>
-<pinref part="U2" gate="A" pin="!EN"/>
+<pinref part="IC9" gate="A" pin="!EN"/>
 <wire x1="215.9" y1="-119.38" x2="236.22" y2="-119.38" width="0.1524" layer="91"/>
 <wire x1="236.22" y1="-119.38" x2="236.22" y2="-137.16" width="0.1524" layer="91"/>
 </segment>
@@ -9974,7 +9974,7 @@ a write-disabled state</text>
 <pinref part="J3" gate="G$1" pin="3"/>
 </segment>
 <segment>
-<pinref part="U$14" gate="G$1" pin="VIN"/>
+<pinref part="IC8" gate="G$1" pin="VIN"/>
 <wire x1="-73.66" y1="71.12" x2="-91.44" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="-91.44" y1="71.12" x2="-99.06" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="-99.06" y1="71.12" x2="-99.06" y2="60.96" width="0.1524" layer="91"/>
@@ -10209,7 +10209,7 @@ a write-disabled state</text>
 <segment>
 <wire x1="-43.18" y1="71.12" x2="-40.64" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<pinref part="U$14" gate="G$1" pin="VOUT"/>
+<pinref part="IC8" gate="G$1" pin="VOUT"/>
 </segment>
 <segment>
 <pinref part="R21" gate="G$1" pin="2"/>
@@ -10295,7 +10295,7 @@ a write-disabled state</text>
 </net>
 <net name="N$23" class="0">
 <segment>
-<pinref part="U$14" gate="G$1" pin="EN"/>
+<pinref part="IC8" gate="G$1" pin="EN"/>
 <pinref part="R22" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -10348,7 +10348,7 @@ a write-disabled state</text>
 <wire x1="-99.06" y1="76.2" x2="-99.06" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U2" gate="A" pin="BAT"/>
+<pinref part="IC9" gate="A" pin="BAT"/>
 <pinref part="U$20" gate="G$1" pin="VBAT"/>
 <wire x1="246.38" y1="-111.76" x2="236.22" y2="-111.76" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="2"/>
@@ -10540,7 +10540,7 @@ a write-disabled state</text>
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="!CHG"/>
+<pinref part="IC9" gate="A" pin="!CHG"/>
 <wire x1="215.9" y1="-116.84" x2="248.92" y2="-116.84" width="0.1524" layer="91"/>
 <pinref part="R14" gate="G$1" pin="2"/>
 <wire x1="248.92" y1="-116.84" x2="264.16" y2="-116.84" width="0.1524" layer="91"/>
@@ -10557,14 +10557,14 @@ a write-disabled state</text>
 </net>
 <net name="N$17" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="ISET"/>
+<pinref part="IC9" gate="A" pin="ISET"/>
 <pinref part="R36" gate="G$1" pin="2"/>
 <wire x1="137.16" y1="-111.76" x2="160.02" y2="-111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$28" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="TS"/>
+<pinref part="IC9" gate="A" pin="TS"/>
 <pinref part="R37" gate="G$1" pin="2"/>
 <wire x1="160.02" y1="-119.38" x2="152.4" y2="-119.38" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="-119.38" x2="152.4" y2="-139.7" width="0.1524" layer="91"/>
@@ -10576,7 +10576,7 @@ a write-disabled state</text>
 </net>
 <net name="N$30" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="VTSB"/>
+<pinref part="IC9" gate="A" pin="VTSB"/>
 <wire x1="160.02" y1="-116.84" x2="147.32" y2="-116.84" width="0.1524" layer="91"/>
 <wire x1="147.32" y1="-116.84" x2="147.32" y2="-129.54" width="0.1524" layer="91"/>
 <pinref part="R38" gate="G$1" pin="2"/>
@@ -10584,7 +10584,7 @@ a write-disabled state</text>
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="!PG"/>
+<pinref part="IC9" gate="A" pin="!PG"/>
 <wire x1="215.9" y1="-121.92" x2="220.98" y2="-121.92" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="220.98" y1="-121.92" x2="220.98" y2="-124.46" width="0.1524" layer="91"/>
@@ -10817,7 +10817,7 @@ a write-disabled state</text>
 <net name="N$3" class="0">
 <segment>
 <pinref part="D1" gate="G$1" pin="C"/>
-<pinref part="U2" gate="A" pin="VBUS"/>
+<pinref part="IC9" gate="A" pin="VBUS"/>
 <wire x1="119.38" y1="-109.22" x2="132.08" y2="-109.22" width="0.1524" layer="91"/>
 <pinref part="C8" gate="G$1" pin="2"/>
 <wire x1="132.08" y1="-109.22" x2="160.02" y2="-109.22" width="0.1524" layer="91"/>

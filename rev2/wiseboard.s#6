@@ -9580,7 +9580,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="SW2" library="adafruit" deviceset="SPST_TACT" device="-KMR2"/>
 <part name="J1" library="WISE" deviceset="EDGE_CON_2" device="2PIN" value="BAT_CON"/>
 <part name="J2" library="WISE" deviceset="EDGE_CON_2" device="2PIN" value="SOL_CON"/>
-<part name="U$2" library="WISE" deviceset="EDGE_CON_4" device=""/>
+<part name="J3" library="WISE" deviceset="EDGE_CON_4" device="" value="PROG_HEADER"/>
 </parts>
 <sheets>
 <sheet>
@@ -9605,9 +9605,9 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-43.18" y1="-129.54" x2="-43.18" y2="27.94" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="-43.18" y1="27.94" x2="-408.94" y2="27.94" width="0.1524" layer="94" style="shortdash"/>
 <text x="-215.9" y="30.48" size="3.81" layer="94">Voltage Generation</text>
-<wire x1="81.28" y1="-76.2" x2="81.28" y2="-218.44" width="0.1524" layer="94" style="shortdash"/>
-<wire x1="81.28" y1="-218.44" x2="279.4" y2="-218.44" width="0.1524" layer="94" style="shortdash"/>
-<wire x1="279.4" y1="-218.44" x2="279.4" y2="-76.2" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="81.28" y1="-76.2" x2="81.28" y2="-170.18" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="81.28" y1="-170.18" x2="279.4" y2="-170.18" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="279.4" y1="-170.18" x2="279.4" y2="-76.2" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="279.4" y1="-76.2" x2="81.28" y2="-76.2" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="81.28" y1="27.94" x2="243.84" y2="27.94" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="243.84" y1="27.94" x2="243.84" y2="-66.04" width="0.1524" layer="94" style="shortdash"/>
@@ -9747,7 +9747,7 @@ a write-disabled state</text>
 <instance part="SW2" gate="G$1" x="17.78" y="55.88"/>
 <instance part="J1" gate="G$1" x="93.98" y="-129.54" rot="R180"/>
 <instance part="J2" gate="G$1" x="93.98" y="-111.76" rot="R180"/>
-<instance part="U$2" gate="G$1" x="162.56" y="73.66" rot="R180"/>
+<instance part="J3" gate="G$1" x="162.56" y="73.66" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -9840,7 +9840,7 @@ a write-disabled state</text>
 <segment>
 <wire x1="162.56" y1="78.74" x2="185.42" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="GND25" gate="1" pin="GND"/>
-<pinref part="U$2" gate="G$1" pin="4"/>
+<pinref part="J3" gate="G$1" pin="4"/>
 </segment>
 <segment>
 <wire x1="-73.66" y1="66.04" x2="-83.82" y2="66.04" width="0.1524" layer="91"/>
@@ -9971,7 +9971,7 @@ a write-disabled state</text>
 <segment>
 <wire x1="162.56" y1="76.2" x2="187.96" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="P+10" gate="VCC" pin="VCC"/>
-<pinref part="U$2" gate="G$1" pin="3"/>
+<pinref part="J3" gate="G$1" pin="3"/>
 </segment>
 <segment>
 <pinref part="U$14" gate="G$1" pin="VIN"/>
@@ -10168,14 +10168,14 @@ a write-disabled state</text>
 <wire x1="162.56" y1="73.66" x2="193.04" y2="73.66" width="0.1524" layer="91"/>
 <label x="177.8" y="73.66" size="1.778" layer="95"/>
 <pinref part="D3" gate="G$1" pin="C"/>
-<pinref part="U$2" gate="G$1" pin="2"/>
+<pinref part="J3" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="TXD" class="0">
 <segment>
 <wire x1="162.56" y1="71.12" x2="185.42" y2="71.12" width="0.1524" layer="91"/>
 <label x="177.8" y="71.12" size="1.778" layer="95"/>
-<pinref part="U$2" gate="G$1" pin="1"/>
+<pinref part="J3" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="TXD"/>
