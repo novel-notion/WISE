@@ -10115,7 +10115,6 @@ a write-disabled state</text>
 <segment>
 <pinref part="R9" gate="G$1" pin="1"/>
 <wire x1="-208.28" y1="55.88" x2="-208.28" y2="45.72" width="0.1524" layer="91"/>
-<label x="-208.28" y="45.72" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -10137,7 +10136,6 @@ a write-disabled state</text>
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="96.52" y1="-109.22" x2="114.3" y2="-109.22" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="2"/>
-<label x="109.22" y="-106.68" size="1.778" layer="95" rot="R180"/>
 </segment>
 <segment>
 <pinref part="R17" gate="G$1" pin="2"/>
@@ -10854,14 +10852,11 @@ a write-disabled state</text>
 <approved hash="104,1,-279.4,-27.94,IC1,VIN,N$4,,,"/>
 <approved hash="104,1,-129.54,-66.04,IC4,VOUT,+15V,,,"/>
 <approved hash="104,1,-129.54,2.54,IC3,VOUT,-15V,,,"/>
-<approved hash="104,1,-73.66,71.12,IC8,VIN,+5V,,,"/>
 <approved hash="114,1,-187.96,76.1365,IC2,B,-IN,,,"/>
 <approved hash="114,1,-187.96,76.1365,IC2,B,+IN,,,"/>
 <approved hash="204,1,-187.96,83.82,IC2P,V+,,,,"/>
 <approved hash="204,1,-187.96,68.58,IC2P,V-,,,,"/>
-<approved hash="104,1,160.02,-114.3,IC9,VSS,GND,,,"/>
 <approved hash="202,1,215.9,-114.3,IC9,VDPM,,,,"/>
-<approved hash="104,1,215.9,-109.22,IC9,EPAD,GND,,,"/>
 <approved hash="106,1,139.7,7.62,N$7,,,,,"/>
 <approved hash="106,1,139.7,-2.54,N$37,,,,,"/>
 <approved hash="106,1,139.7,-45.72,N$48,,,,,"/>
