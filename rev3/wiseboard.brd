@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="1.27" unitdist="mm" unit="inch" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -2106,6 +2106,28 @@ NS Package M08A</description>
 </package>
 </packages>
 </library>
+<library name="testpad" urn="urn:adsk.eagle:library:385">
+<description>&lt;b&gt;Test Pins/Pads&lt;/b&gt;&lt;p&gt;
+Cream on SMD OFF.&lt;br&gt;
+new: Attribute TP_SIGNAL_NAME&lt;br&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="TP20R" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="2" dy="2" layer="1" roundness="100" cream="no"/>
+<text x="-1" y="1.05" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.762" y="-1.016" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+<package name="TP20SQ" library_version="1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="2" dy="2" layer="1" cream="no"/>
+<text x="-1" y="1.05" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.016" y="-1.143" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2376,6 +2398,24 @@ design rules under a new name.</description>
 <element name="L1" library="WISE" package="NR6028T220M" value="NR6028T220M" x="-73.66" y="-1.27"/>
 <element name="L2" library="WISE" package="NR6028T220M" value="NR6028T220M" x="-87.63" y="-1.27"/>
 <element name="IC6" library="WISE" package="SOT95P280X145-5N" value="AP2112" x="-93.98" y="-12.7"/>
+<element name="TP2" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP20R" value="TPSTP20R" x="-92.71" y="-19.05">
+<attribute name="TP_SIGNAL_NAME" value="" x="-92.71" y="-19.05" size="1.778" layer="27" display="off"/>
+</element>
+<element name="TP3" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP20R" value="TPSTP20R" x="-92.71" y="-24.13">
+<attribute name="TP_SIGNAL_NAME" value="" x="-92.71" y="-24.13" size="1.778" layer="27" display="off"/>
+</element>
+<element name="TP4" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP20R" value="TPSTP20R" x="-92.71" y="-29.21">
+<attribute name="TP_SIGNAL_NAME" value="" x="-92.71" y="-29.21" size="1.778" layer="27" display="off"/>
+</element>
+<element name="TP5" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP20R" value="TPSTP20R" x="-92.71" y="-34.29">
+<attribute name="TP_SIGNAL_NAME" value="" x="-92.71" y="-34.29" size="1.778" layer="27" display="off"/>
+</element>
+<element name="TP6" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP20R" value="TPSTP20R" x="-92.71" y="-39.37">
+<attribute name="TP_SIGNAL_NAME" value="" x="-92.71" y="-39.37" size="1.778" layer="27" display="off"/>
+</element>
+<element name="TP7" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP20SQ" value="TPSTP20SQ" x="-92.71" y="-44.45">
+<attribute name="TP_SIGNAL_NAME" value="" x="-92.71" y="-44.45" size="1.778" layer="27" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -2427,6 +2467,8 @@ design rules under a new name.</description>
 <contactref element="IC6" pad="2"/>
 <contactref element="IC9" pad="9"/>
 <contactref element="IC9" pad="11"/>
+<contactref element="TP7" pad="TP"/>
+<wire x1="-95.28" y1="-12.7" x2="-92.71" y2="-44.45" width="0" layer="19" extent="1-1"/>
 <wire x1="-64.4144" y1="6.35" x2="-95.28" y2="-12.7" width="0" layer="19" extent="1-1"/>
 <wire x1="-60.0456" y1="5.842" x2="-64.4144" y2="6.35" width="0" layer="19" extent="1-1"/>
 <wire x1="-60.0456" y1="6.858" x2="-60.0456" y2="5.842" width="0" layer="19" extent="1-1"/>
@@ -2572,13 +2614,17 @@ design rules under a new name.</description>
 <signal name="TXD">
 <contactref element="J3" pad="1"/>
 <contactref element="IC7" pad="35"/>
-<wire x1="-25.32" y1="1.16" x2="-34.29" y2="59.944" width="0" layer="19" extent="1-1"/>
+<contactref element="TP4" pad="TP"/>
+<wire x1="-25.32" y1="1.16" x2="-92.71" y2="-29.21" width="0" layer="19" extent="1-1"/>
+<wire x1="-34.29" y1="59.944" x2="-25.32" y2="1.16" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GPIO0">
 <contactref element="R23" pad="1"/>
 <contactref element="SW1" pad="2"/>
 <contactref element="SW1" pad="4"/>
 <contactref element="IC7" pad="25"/>
+<contactref element="TP3" pad="TP"/>
+<wire x1="-38.02" y1="1.16" x2="-92.71" y2="-24.13" width="0" layer="19" extent="1-1"/>
 <wire x1="-49.21" y1="46.99" x2="-38.02" y2="1.16" width="0" layer="19" extent="1-1"/>
 <wire x1="-62.77" y1="63.97" x2="-49.21" y2="46.99" width="0" layer="19" extent="1-1"/>
 <wire x1="-66.77" y1="63.97" x2="-62.77" y2="63.97" width="0" layer="19" extent="1-1"/>
@@ -2588,9 +2634,11 @@ design rules under a new name.</description>
 <contactref element="SW2" pad="2"/>
 <contactref element="SW2" pad="4"/>
 <contactref element="IC7" pad="3"/>
-<wire x1="-18.51" y1="69.05" x2="-14.51" y2="69.05" width="0" layer="19" extent="1-1"/>
-<wire x1="-36.51" y1="46.99" x2="-18.51" y2="69.05" width="0" layer="19" extent="1-1"/>
-<wire x1="-24.05" y1="19.16" x2="-36.51" y2="46.99" width="0" layer="19" extent="1-1"/>
+<contactref element="TP2" pad="TP"/>
+<wire x1="-24.05" y1="19.16" x2="-92.71" y2="-19.05" width="0" layer="19" extent="1-1"/>
+<wire x1="-36.51" y1="46.99" x2="-24.05" y2="19.16" width="0" layer="19" extent="1-1"/>
+<wire x1="-18.51" y1="69.05" x2="-36.51" y2="46.99" width="0" layer="19" extent="1-1"/>
+<wire x1="-14.51" y1="69.05" x2="-18.51" y2="69.05" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="R21" pad="2"/>
@@ -2620,6 +2668,8 @@ design rules under a new name.</description>
 <signal name="RXD">
 <contactref element="D3" pad="A"/>
 <contactref element="IC7" pad="34"/>
+<contactref element="TP5" pad="TP"/>
+<wire x1="-26.59" y1="1.16" x2="-92.71" y2="-34.29" width="0" layer="19" extent="1-1"/>
 <wire x1="-56.57" y1="64.77" x2="-26.59" y2="1.16" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$22">
@@ -2876,6 +2926,8 @@ design rules under a new name.</description>
 <contactref element="R22" pad="1"/>
 <contactref element="D2" pad="C"/>
 <contactref element="IC6" pad="1"/>
+<contactref element="TP6" pad="TP"/>
+<wire x1="-95.28" y1="-11.75" x2="-92.71" y2="-39.37" width="0" layer="19" extent="1-1"/>
 <wire x1="-42.86" y1="46.99" x2="-95.28" y2="-11.75" width="0" layer="19" extent="1-1"/>
 <wire x1="-41.91" y1="59.944" x2="-42.86" y2="46.99" width="0" layer="19" extent="1-1"/>
 <wire x1="-53.92" y1="64.77" x2="-41.91" y2="59.944" width="0" layer="19" extent="1-1"/>

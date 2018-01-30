@@ -802,6 +802,8 @@
 <vertex x="11.87825" y="40.757"/>
 <vertex x="11.14925" y="40.757"/>
 </polygon>
+<text x="21.5" y="41" size="1.778" layer="30" font="fixed" rot="MR0" align="center">Project WISE</text>
+<text x="40.125" y="28.875" size="1.27" layer="30" font="fixed" rot="R270">Rev. 2</text>
 </plain>
 <libraries>
 <library name="WISE">

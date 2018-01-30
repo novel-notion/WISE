@@ -1391,7 +1391,6 @@
 <vertex x="29.75075" y="41.513"/>
 <vertex x="29.75075" y="41.038"/>
 </polygon>
-<wire x1="21.5" y1="52.625" x2="21.5" y2="48.625" width="0.5" layer="20"/>
 </plain>
 <libraries>
 <library name="WISE">

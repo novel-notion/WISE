@@ -9704,7 +9704,7 @@ a write-disabled state</text>
 <instance part="GND16" gate="1" x="109.22" y="-132.08"/>
 <instance part="IC9" gate="A" x="177.8" y="-114.3"/>
 <instance part="GND47" gate="1" x="144.78" y="-109.22" rot="R270"/>
-<instance part="U$20" gate="G$1" x="248.92" y="-111.76" rot="R270"/>
+<instance part="U$20" gate="G$1" x="137.16" y="-129.54" rot="R180"/>
 <instance part="GND48" gate="1" x="264.16" y="-144.78"/>
 <instance part="GND19" gate="1" x="132.08" y="-83.82" rot="R180"/>
 <instance part="POWERGOOD" gate="G$1" x="220.98" y="-142.24" rot="R180"/>
@@ -9712,10 +9712,10 @@ a write-disabled state</text>
 <instance part="U$22" gate="G$1" x="248.92" y="-144.78" rot="R180"/>
 <instance part="GND21" gate="1" x="198.12" y="-111.76" rot="R90"/>
 <instance part="R36" gate="G$1" x="154.94" y="-109.22"/>
-<instance part="GND49" gate="1" x="157.48" y="-124.46" rot="R270"/>
+<instance part="GND49" gate="1" x="160.02" y="-127"/>
 <instance part="R37" gate="G$1" x="218.44" y="-106.68" rot="R180"/>
 <instance part="GND50" gate="1" x="228.6" y="-106.68" rot="R90"/>
-<instance part="R38" gate="G$1" x="203.2" y="-104.14" rot="R180"/>
+<instance part="R38" gate="G$1" x="203.2" y="-101.6" rot="R180"/>
 <instance part="R10" gate="G$1" x="220.98" y="-132.08" rot="R90"/>
 <instance part="GND15" gate="1" x="236.22" y="-139.7"/>
 <instance part="IC5" gate="G$1" x="86.36" y="76.2"/>
@@ -9732,8 +9732,8 @@ a write-disabled state</text>
 <instance part="R15" gate="G$1" x="236.22" y="0" rot="R90"/>
 <instance part="U$1" gate="G$1" x="236.22" y="22.86"/>
 <instance part="GND24" gate="1" x="236.22" y="-12.7"/>
-<instance part="C10" gate="G$1" x="236.22" y="-106.68"/>
-<instance part="GND27" gate="1" x="236.22" y="-99.06" rot="R180"/>
+<instance part="C10" gate="G$1" x="132.08" y="-121.92" rot="R90"/>
+<instance part="GND27" gate="1" x="124.46" y="-121.92" rot="R270"/>
 <instance part="C8" gate="G$1" x="132.08" y="-96.52"/>
 <instance part="R17" gate="G$1" x="236.22" y="-33.02" rot="R90"/>
 <instance part="R18" gate="G$1" x="236.22" y="-43.18" rot="R90"/>
@@ -9962,7 +9962,7 @@ a write-disabled state</text>
 <segment>
 <pinref part="C10" gate="G$1" pin="1"/>
 <pinref part="GND27" gate="1" pin="GND"/>
-<wire x1="236.22" y1="-101.6" x2="236.22" y2="-104.14" width="0.1524" layer="91"/>
+<wire x1="127" y1="-121.92" x2="129.54" y2="-121.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R18" gate="G$1" pin="1"/>
@@ -10340,10 +10340,10 @@ a write-disabled state</text>
 <segment>
 <pinref part="IC9" gate="A" pin="BAT"/>
 <pinref part="U$20" gate="G$1" pin="VBAT"/>
-<wire x1="246.38" y1="-111.76" x2="236.22" y2="-111.76" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="-127" x2="137.16" y2="-121.92" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="2"/>
-<wire x1="236.22" y1="-111.76" x2="162.56" y2="-121.92" width="0.1524" layer="91"/>
-<junction x="236.22" y="-111.76"/>
+<wire x1="137.16" y1="-121.92" x2="162.56" y2="-121.92" width="0.1524" layer="91"/>
+<junction x="137.16" y="-121.92"/>
 </segment>
 <segment>
 <pinref part="POWERGOOD" gate="G$1" pin="A"/>
@@ -10557,15 +10557,16 @@ a write-disabled state</text>
 <wire x1="193.04" y1="-106.68" x2="208.28" y2="-106.68" width="0.1524" layer="91"/>
 <pinref part="R38" gate="G$1" pin="1"/>
 <wire x1="208.28" y1="-106.68" x2="213.36" y2="-106.68" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="-104.14" x2="208.28" y2="-106.68" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="-101.6" x2="208.28" y2="-106.68" width="0.1524" layer="91"/>
 <junction x="208.28" y="-106.68"/>
 </segment>
 </net>
 <net name="N$30" class="0">
 <segment>
 <pinref part="IC9" gate="A" pin="VTSB"/>
-<wire x1="193.04" y1="-104.14" x2="198.12" y2="-104.14" width="0.1524" layer="91"/>
 <pinref part="R38" gate="G$1" pin="2"/>
+<wire x1="193.04" y1="-104.14" x2="198.12" y2="-104.14" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="-104.14" x2="198.12" y2="-101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">

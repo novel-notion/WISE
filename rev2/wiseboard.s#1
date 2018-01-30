@@ -9731,7 +9731,7 @@ a write-disabled state</text>
 <instance part="+3V6" gate="G$1" x="-7.62" y="-116.84"/>
 <instance part="GND22" gate="1" x="91.44" y="-53.34" rot="R270"/>
 <instance part="R2" gate="G$1" x="-365.76" y="-33.02" rot="R270"/>
-<instance part="+3V3" gate="G$1" x="93.98" y="12.7" rot="R90"/>
+<instance part="+3V3" gate="G$1" x="86.36" y="17.78"/>
 <instance part="R1" gate="G$1" x="236.22" y="10.16" rot="R90"/>
 <instance part="R15" gate="G$1" x="236.22" y="0" rot="R90"/>
 <instance part="U$1" gate="G$1" x="236.22" y="22.86"/>
@@ -10115,6 +10115,7 @@ a write-disabled state</text>
 <segment>
 <pinref part="R9" gate="G$1" pin="1"/>
 <wire x1="-208.28" y1="55.88" x2="-208.28" y2="45.72" width="0.1524" layer="91"/>
+<label x="-208.28" y="45.72" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -10136,6 +10137,7 @@ a write-disabled state</text>
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="96.52" y1="-109.22" x2="114.3" y2="-109.22" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="2"/>
+<label x="109.22" y="-106.68" size="1.778" layer="95" rot="R180"/>
 </segment>
 <segment>
 <pinref part="R17" gate="G$1" pin="2"/>
@@ -10180,6 +10182,11 @@ a write-disabled state</text>
 <pinref part="SW1" gate="G$1" pin="S1"/>
 <junction x="0" y="60.96"/>
 </segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="IO0"/>
+<wire x1="139.7" y1="7.62" x2="147.32" y2="7.62" width="0.1524" layer="91"/>
+<label x="144.78" y="7.62" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="RESET" class="0">
 <segment>
@@ -10190,6 +10197,11 @@ a write-disabled state</text>
 <pinref part="SW2" gate="G$1" pin="S"/>
 <pinref part="SW2" gate="G$1" pin="S1"/>
 <junction x="20.32" y="60.96"/>
+</segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="EN"/>
+<wire x1="104.14" y1="12.7" x2="91.44" y2="12.7" width="0.1524" layer="91"/>
+<label x="91.44" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -10251,14 +10263,9 @@ a write-disabled state</text>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
-<pinref part="U3" gate="G$1" pin="EN"/>
-<wire x1="104.14" y1="12.7" x2="101.6" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
 <pinref part="U3" gate="G$1" pin="3V3"/>
-<wire x1="101.6" y1="12.7" x2="96.52" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="15.24" x2="101.6" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="15.24" x2="101.6" y2="12.7" width="0.1524" layer="91"/>
-<junction x="101.6" y="12.7"/>
+<wire x1="104.14" y1="15.24" x2="86.36" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RXD" class="0">
@@ -10817,13 +10824,6 @@ a write-disabled state</text>
 <junction x="132.08" y="-109.22"/>
 </segment>
 </net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="IO0"/>
-<wire x1="139.7" y1="7.62" x2="147.32" y2="7.62" width="0.1524" layer="91"/>
-<label x="144.78" y="7.62" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="+5V" class="0">
 <segment>
 <wire x1="162.56" y1="76.2" x2="187.96" y2="76.2" width="0.1524" layer="91"/>
@@ -10852,11 +10852,14 @@ a write-disabled state</text>
 <approved hash="104,1,-279.4,-27.94,IC1,VIN,N$4,,,"/>
 <approved hash="104,1,-129.54,-66.04,IC4,VOUT,+15V,,,"/>
 <approved hash="104,1,-129.54,2.54,IC3,VOUT,-15V,,,"/>
+<approved hash="104,1,-73.66,71.12,IC8,VIN,+5V,,,"/>
 <approved hash="114,1,-187.96,76.1365,IC2,B,-IN,,,"/>
 <approved hash="114,1,-187.96,76.1365,IC2,B,+IN,,,"/>
 <approved hash="204,1,-187.96,83.82,IC2P,V+,,,,"/>
 <approved hash="204,1,-187.96,68.58,IC2P,V-,,,,"/>
+<approved hash="104,1,160.02,-114.3,IC9,VSS,GND,,,"/>
 <approved hash="202,1,215.9,-114.3,IC9,VDPM,,,,"/>
+<approved hash="104,1,215.9,-109.22,IC9,EPAD,GND,,,"/>
 <approved hash="106,1,139.7,7.62,N$7,,,,,"/>
 <approved hash="106,1,139.7,-2.54,N$37,,,,,"/>
 <approved hash="106,1,139.7,-45.72,N$48,,,,,"/>

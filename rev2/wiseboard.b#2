@@ -789,21 +789,10 @@
 <polygon width="0" layer="30">
 <vertex x="11.14925" y="40.7635"/>
 <vertex x="11.14925" y="40.671"/>
-<vertex x="11.27875" y="40.523"/>
-<vertex x="11.42075" y="40.3005"/>
-<vertex x="11.54425" y="40.01"/>
-<vertex x="11.60625" y="39.652"/>
-<vertex x="11.71125" y="39.652"/>
-<vertex x="11.67425" y="39.9235"/>
-<vertex x="11.58775" y="40.1705"/>
-<vertex x="11.45175" y="40.4115"/>
-<vertex x="11.25425" y="40.6645"/>
-<vertex x="11.87825" y="40.6645"/>
-<vertex x="11.87825" y="40.757"/>
 <vertex x="11.14925" y="40.757"/>
 </polygon>
 <text x="21.5" y="41" size="1.778" layer="30" font="fixed" rot="MR0" align="center">Project WISE</text>
-<text x="9.125" y="0.875" size="1.27" layer="30" font="fixed" distance="0" rot="MR0">Mk2</text>
+<text x="8.25" y="0.75" size="0.8128" layer="30" font="fixed" distance="0" rot="MR0">Mk2</text>
 </plain>
 <libraries>
 <library name="WISE">
