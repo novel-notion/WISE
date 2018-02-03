@@ -9927,7 +9927,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="D1" library="adafruit" deviceset="DIODE" device="SOD-123" value="MBR120"/>
 <part name="GND32" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="R22" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" value="10K"/>
 <part name="D2" library="adafruit" deviceset="DIODE" device="SOD-123" value="1n4148"/>
 <part name="GND33" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -10009,6 +10008,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="3V3" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TPS" device="TP20R"/>
 <part name="+3V7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10105,7 +10105,6 @@ a write-disabled state</text>
 <instance part="GND25" gate="1" x="185.42" y="81.28" rot="R180"/>
 <instance part="D1" gate="G$1" x="-99.06" y="81.28" rot="R270"/>
 <instance part="GND32" gate="1" x="-91.44" y="66.04" rot="R270"/>
-<instance part="+3V1" gate="G$1" x="-38.1" y="71.12" rot="R270"/>
 <instance part="R22" gate="G$1" x="-83.82" y="60.96"/>
 <instance part="D2" gate="G$1" x="195.58" y="73.66" rot="R180"/>
 <instance part="GND33" gate="1" x="0" y="48.26"/>
@@ -10188,6 +10187,7 @@ a write-disabled state</text>
 <instance part="GND11" gate="1" x="-165.1" y="-73.66" rot="R270"/>
 <instance part="3V3" gate="G$1" x="-66.04" y="83.82" rot="R90"/>
 <instance part="+3V7" gate="G$1" x="-50.8" y="83.82" rot="R270"/>
+<instance part="+3V1" gate="G$1" x="-33.02" y="71.12" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -10719,6 +10719,11 @@ a write-disabled state</text>
 <pinref part="3V3" gate="G$1" pin="PP"/>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
 <wire x1="-53.34" y1="83.82" x2="-63.5" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC6" gate="U$2" pin="VOUT"/>
+<wire x1="-43.18" y1="71.12" x2="-35.56" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="RXD" class="0">
@@ -11291,13 +11296,6 @@ a write-disabled state</text>
 <wire x1="-213.36" y1="-5.08" x2="-200.66" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-213.36" y1="-5.08" x2="-213.36" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="-213.36" y="-5.08"/>
-</segment>
-</net>
-<net name="VOUT" class="0">
-<segment>
-<wire x1="-43.18" y1="71.12" x2="-40.64" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<pinref part="IC6" gate="U$2" pin="VOUT"/>
 </segment>
 </net>
 <net name="CS" class="0">
